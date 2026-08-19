@@ -309,7 +309,11 @@
     if(!grid) return;
     const wish = getWish();
     if(wish.length === 0){
-      grid.innerHTML = '<p style="text-align:center; color:var(--ink-soft); grid-column:1/-1; padding:60px 0;">Your wishlist is empty. <a href="shop.html" style="color:var(--pink);">Discover products</a></p>';
+      var wishName = '';
+      try{ wishName = sessionStorage.getItem('bw_user_name') || ''; }catch(e){}
+      var greet = wishName ? wishName + ', y' : 'Y';
+      var greetRest = wishName ? 'our' : 'our';
+      grid.innerHTML = '<p style="text-align:center; color:var(--ink-soft); grid-column:1/-1; padding:60px 0;">' + greet + greetRest + ' wishlist is empty. <a href="shop.html" style="color:var(--pink);">Discover products</a></p>';
       return;
     }
     grid.innerHTML = wish.map((item, i) => `

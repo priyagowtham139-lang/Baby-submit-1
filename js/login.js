@@ -122,6 +122,10 @@
     e.preventDefault();
     if(!formSignin.checkValidity()){ formSignin.reportValidity(); return; }
     try{ sessionStorage.setItem('bw_role', currentRole); }catch(err){}
+    const emailVal = ($('#siEmail') || {}).value || '';
+    const emailPart = emailVal.split('@')[0] || 'User';
+    const displayName = emailPart.replace(/[._\-]+/g, ' ').replace(/\b\w/g, function(c){ return c.toUpperCase(); });
+    try{ sessionStorage.setItem('bw_user_name', displayName); }catch(err){}
     window.bwToast(currentRole === 'admin' ? 'Welcome back, Admin' : 'Welcome back!', 'fa-circle-check');
     setTimeout(()=>{
       location.href = currentRole === 'admin' ? 'admin-dashboard.html' : 'user-dashboard.html';

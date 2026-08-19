@@ -62,6 +62,34 @@
       if(saved && $('#panel-'+saved)) start = saved;
     }catch(err){}
     showPanel(start);
+
+    try{
+      var uname = sessionStorage.getItem('bw_user_name');
+      if(uname){
+        var initials = uname.split(' ').map(function(w){ return w.charAt(0); }).join('').toUpperCase();
+        $$('.dash-avatar').forEach(function(el){ el.textContent = initials; });
+        $$('.dash-profile h5').forEach(function(el){ el.textContent = uname; });
+        var welcome = $('.dash-topbar p');
+        if(welcome && welcome.textContent.indexOf('Welcome back') !== -1){
+          var firstName = uname.split(' ')[0];
+          welcome.textContent = 'Welcome back, ' + firstName + ' \u2014 here\'s what\'s happening with your account.';
+        }
+        var dName = $('#dName');
+        if(dName) dName.value = uname;
+        var addressPs = $$('.address-card p');
+        addressPs.forEach(function(p){
+          if(p.querySelector && p.querySelector('br') && p.childNodes.length){
+            var first = p.childNodes[0];
+            if(first && first.nodeType === 3){
+              var oldName = first.textContent.trim();
+              if(oldName && oldName !== uname){
+                first.textContent = uname + '\n';
+              }
+            }
+          }
+        });
+      }
+    }catch(err){}
   });
 
   /* logout demo */
