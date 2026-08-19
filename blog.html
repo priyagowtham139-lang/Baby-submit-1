@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Journal — Stackly Baby & Kids</title>
+<meta name="description" content="Parenting tips, nursery styling and fabric guides from the Stackly journal.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+<header class="site-header">
+    <div class="header-inner">
+      <div class="header-side left">
+        <nav class="main-nav" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="nursery.html">Nursery</a>
+          <a href="about.html">Our Story</a>
+          <a href="blog.html">Journal</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+
+      <a href="index.html" class="brand">
+        <img src="Assets/logo_black (4).webp" alt="Stackly" class="brand-logo">
+      </a>
+
+      <div class="header-side right">
+        <button class="icon-btn hide-mobile" id="wishBtn" aria-label="Wishlist" onclick="location.href='wishlist.html'">
+          <i class="fa-solid fa-heart"></i><span class="badge" id="wishBadge">0</span>
+        </button>
+        <button class="icon-btn hide-mobile" id="cartBtn" aria-label="Cart" onclick="location.href='cart.html'">
+          <i class="fa-solid fa-bag-shopping"></i><span class="badge" id="cartBadge">0</span>
+        </button>
+        <a href="login.html" class="btn-signin hide-mobile"><i class="fa-solid fa-user"></i><span>Sign In</span></a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav" id="mobileNav">
+    <div class="scrim"></div>
+    <div class="panel">
+      <div class="mobile-nav-top">
+        <a href="index.html" class="brand">
+          <span class="brand-mark"><i class="fa-solid fa-leaf fa-fw"></i></span>
+          <span class="brand-name">Stackly</span>
+        </a>
+        <button class="mobile-close" id="mobileNavClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <ul>
+        <li><a href="index.html"><span>Home</span><i class="fa-solid fa-circle-right"></i></a></li>
+        <li><a href="shop.html"><span>Shop</span><i class="fa-solid fa-circle-right"></i></a></li>
+        <li><a href="nursery.html"><span>Nursery</span><i class="fa-solid fa-circle-right"></i></a></li>
+        <li><a href="about.html"><span>Our Story</span><i class="fa-solid fa-circle-right"></i></a></li>
+        <li><a href="blog.html"><span>Journal</span><i class="fa-solid fa-circle-right"></i></a></li>
+        <li><a href="contact.html"><span>Contact</span><i class="fa-solid fa-circle-right"></i></a></li>
+      </ul>
+      <div class="mobile-nav-actions">
+        <a href="wishlist.html" class="btn btn-outline btn-block"><i class="fa-solid fa-heart"></i> Wishlist <span class="badge" id="wishBadgeMob">0</span></a>
+        <a href="cart.html" class="btn btn-outline btn-block"><i class="fa-solid fa-bag-shopping"></i> My Bag <span class="badge" id="cartBadgeMob">0</span></a>
+        <a href="login.html" class="btn btn-primary btn-block"><i class="fa-solid fa-user"></i> Sign In</a>
+      </div>
+      <div class="mobile-nav-foot">
+        <a href="404.html" data-social-404 aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="404.html" data-social-404 aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="404.html" data-social-404 aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+        <a href="404.html" data-social-404 aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+      </div>
+    </div>
+  </div>
+
+<main>
+<!-- 1. PAGE BANNER -->
+<section class="hero">
+  <div class="hero-slides">
+    <div class="hero-slide active" style="background-image:url('Assets/story1.webp')"></div>
+    <div class="hero-slide" style="background-image:url('Assets/story2.webp')"></div>
+    <div class="hero-slide" style="background-image:url('Assets/story3_compressed.webp')"></div>
+  </div>
+</section>
+
+<!-- 2. FEATURED POST -->
+<section class="section">
+  <div class="container">
+    <div class="blog-featured reveal-scale">
+      <img src="Assets/baby_sleeping.webp" alt="Baby wrapped in muslin blanket">
+      <div class="bf-copy">
+        <span class="chip chip-new">Editor's pick</span>
+        <h2 class="mt-2">The 5-layer rule for newborn sleep temperature</h2>
+        <p style="margin-top:12px;color:var(--ink-soft);">A simple, pediatrician-reviewed way to dress your newborn for sleep — in any season, without a thermometer.</p>
+        <a href="#" class="btn btn-outline mt-3">Read the guide <i class="fa-solid fa-circle-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. FILTER + GRID -->
+<section class="section" style="padding-top:0;">
+  <div class="container">
+    <div class="filter-bar">
+      <div class="filter-chips">
+        <button class="active">All posts</button>
+        <button>Sleep</button>
+        <button>Nursery</button>
+        <button>Fabric &amp; Care</button>
+        <button>Family Stories</button>
+      </div>
+    </div>
+    <div class="blog-grid stagger">
+      <article class="blog-card reveal">
+        <div class="bc-media"><img src="Assets/Playtime.webp" alt="Toddler playing with wooden toys"></div>
+        <div class="bc-body"><span class="bc-meta"><i class="fa-solid fa-tag"></i> Playtime · 4 min read</span><h4>Open-ended toys: what actually holds a toddler's attention</h4><p>We tested 20 toys over three months. Here's what survived.</p><a href="#" class="bc-link">Read more <i class="fa-solid fa-circle-right"></i></a></div>
+      </article>
+      <article class="blog-card reveal">
+        <div class="bc-media"><img src="Assets/small_nursery.webp" alt="Nursery styled corner"></div>
+        <div class="bc-body"><span class="bc-meta"><i class="fa-solid fa-tag"></i> Nursery · 6 min read</span><h4>Small nursery? Here's how to fit a full room in 80 sq ft</h4><p>Real layouts from three Stackly families in city apartments.</p><a href="#" class="bc-link">Read more <i class="fa-solid fa-circle-right"></i></a></div>
+      </article>
+      <article class="blog-card reveal">
+        <div class="bc-media"><img src="Assets/cotton_labels.webp" alt="Folded organic cotton muslins"></div>
+        <div class="bc-body"><span class="bc-meta"><i class="fa-solid fa-tag"></i> Fabric &amp; Care · 3 min read</span><h4>Why "organic cotton" labels don't all mean the same thing</h4><p>A plain-language breakdown of GOTS, OEKO-TEX and what to actually check.</p><a href="#" class="bc-link">Read more <i class="fa-solid fa-circle-right"></i></a></div>
+      </article>
+      <article class="blog-card reveal">
+        <div class="bc-media"><img src="Assets/three_romber.webp" alt="Parent holding baby in knitwear"></div>
+        <div class="bc-body"><span class="bc-meta"><i class="fa-solid fa-tag"></i> Family Stories · 5 min read</span><h4>"We handed the same romper down to three kids" — a Stackly family</h4><p>One garment, three children, eight years. A real closet audit.</p><a href="#" class="bc-link">Read more <i class="fa-solid fa-circle-right"></i></a></div>
+      </article>
+      <article class="blog-card reveal">
+        <div class="bc-media"><img src="Assets/nap_transitions.webp" alt="Toddler outdoors in autumn"></div>
+        <div class="bc-body"><span class="bc-meta"><i class="fa-solid fa-tag"></i> Sleep · 4 min read</span><h4>Nap transitions: signs it's time to drop one</h4><p>Four signals to watch for, and how to shift the schedule gently.</p><a href="#" class="bc-link">Read more <i class="fa-solid fa-circle-right"></i></a></div>
+      </article>
+      <article class="blog-card reveal">
+        <div class="bc-media"><img src="Assets/wall__decor.webp" alt="Framed nursery wall art"></div>
+        <div class="bc-body"><span class="bc-meta"><i class="fa-solid fa-tag"></i> Nursery · 3 min read</span><h4>Choosing wall art that survives a decade of redecorating</h4><p>Neutral doesn't have to mean boring — our styling team's approach.</p><a href="#" class="bc-link">Read more <i class="fa-solid fa-circle-right"></i></a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 4. PARENTING TIPS CAROUSEL -->
+<section class="section" style="padding-top:0; background:var(--gray); border-radius:var(--radius-lg); margin:0 16px;">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow"><i class="fa-solid fa-lightbulb"></i> Quick tips</span>
+      <h2>Parenting wisdom in a nutshell</h2>
+    </div>
+    <div class="tips-viewport">
+    <div id="tipsCarousel" style="display:flex; gap:20px; padding:12px 0 24px;" class="stagger">
+      <div class="reveal-scale tc-card"><div class="tc-icon"><i class="fa-solid fa-moon"></i></div><h4 style="margin-bottom:8px;">Sleep begets sleep</h4><p style="font-size:13px; color:var(--ink-soft); line-height:1.6;">An overtired baby fights sleep harder. Watch for early drowsy cues — yawning, eye rubbing — and start the routine 15 minutes earlier than you think.</p></div>
+      <div class="reveal-scale tc-card"><div class="tc-icon"><i class="fa-solid fa-shirt"></i></div><h4 style="margin-bottom:8px;">Layers over blankets</h4><p style="font-size:13px; color:var(--ink-soft); line-height:1.6;">A fleece suit under a sleep sack is safer and warmer than a loose blanket. Think one layer more than what you'd wear yourself.</p></div>
+      <div class="reveal-scale tc-card"><div class="tc-icon"><i class="fa-solid fa-spa"></i></div><h4 style="margin-bottom:8px;">One new thing at a time</h4><p style="font-size:13px; color:var(--ink-soft); line-height:1.6;">Introduce a new food, sleep change, or routine shift one at a time. Wait three days to see how your baby responds before adding another.</p></div>
+      <div class="reveal-scale tc-card"><div class="tc-icon"><i class="fa-solid fa-volume-low"></i></div><h4 style="margin-bottom:8px;">White noise works</h4><p style="font-size:13px; color:var(--ink-soft); line-height:1.6;">Keep it below 50 dB and place the machine across the room. A steady hum mimics the womb and blocks household noise spikes.</p></div>
+      <div class="reveal-scale tc-card"><div class="tc-icon"><i class="fa-solid fa-heart"></i></div><h4 style="margin-bottom:8px;">Skin-to-skin calms</h4><p style="font-size:13px; color:var(--ink-soft); line-height:1.6;">Even five minutes of bare chest contact lowers cortisol for both parent and baby. Try it before bedtime when fussiness peaks.</p></div>
+      <!-- duplicated for seamless loop -->
+      <div class="tc-card"><div class="tc-icon"><i class="fa-solid fa-moon"></i></div><h4 style="margin-bottom:8px;">Sleep begets sleep</h4><p style="font-size:13px; color:var(--ink-soft); line-height:1.6;">An overtired baby fights sleep harder. Watch for early drowsy cues — yawning, eye rubbing — and start the routine 15 minutes earlier than you think.</p></div>
+      <div class="tc-card"><div class="tc-icon"><i class="fa-solid fa-shirt"></i></div><h4 style="margin-bottom:8px;">Layers over blankets</h4><p style="font-size:13px; color:var(--ink-soft); line-height:1.6;">A fleece suit under a sleep sack is safer and warmer than a loose blanket. Think one layer more than what you'd wear yourself.</p></div>
+      <div class="tc-card"><div class="tc-icon"><i class="fa-solid fa-spa"></i></div><h4 style="margin-bottom:8px;">One new thing at a time</h4><p style="font-size:13px; color:var(--ink-soft); line-height:1.6;">Introduce a new food, sleep change, or routine shift one at a time. Wait three days to see how your baby responds before adding another.</p></div>
+      <div class="tc-card"><div class="tc-icon"><i class="fa-solid fa-volume-low"></i></div><h4 style="margin-bottom:8px;">White noise works</h4><p style="font-size:13px; color:var(--ink-soft); line-height:1.6;">Keep it below 50 dB and place the machine across the room. A steady hum mimics the womb and blocks household noise spikes.</p></div>
+      <div class="tc-card"><div class="tc-icon"><i class="fa-solid fa-heart"></i></div><h4 style="margin-bottom:8px;">Skin-to-skin calms</h4><p style="font-size:13px; color:var(--ink-soft); line-height:1.6;">Even five minutes of bare chest contact lowers cortisol for both parent and baby. Try it before bedtime when fussiness peaks.</p></div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. NEWSLETTER CTA -->
+<section class="section" style="padding-top:0;">
+  <div class="container">
+    <div class="simple-cta reveal-scale">
+      <span class="eyebrow"><i class="fa-solid fa-envelope-open-text"></i> Weekly, not daily</span>
+      <h2 class="mt-2">One useful email a week, nothing else</h2>
+      <form class="newsletter-form" data-newsletter style="justify-content:center;">
+        <input type="email" required placeholder="you@example.com" aria-label="Email address" style="background:var(--white);border-color:var(--line);color:var(--ink);">
+        <button type="submit" class="btn btn-primary">Subscribe <i class="fa-solid fa-paper-plane"></i></button>
+      </form>
+      <p data-newsletter-error style="display:none; color:#e74c3c; font-size:13px; margin-top:8px; text-align:center;">Only Gmail addresses are allowed.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 6. POPULAR TOPICS -->
+<section class="section" style="padding-top:0;">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow"><i class="fa-solid fa-hashtag"></i> Browse by topic</span>
+      <h2>Popular topics</h2>
+    </div>
+    <div class="filter-chips" style="justify-content:center;margin-top:26px;">
+      <button onclick="window.location.href='404.html'">Sleep training</button>
+      <button onclick="window.location.href='404.html'">Organic fabric</button>
+      <button onclick="window.location.href='404.html'">Small-space nursery</button>
+      <button onclick="window.location.href='404.html'">Hand-me-downs</button>
+      <button onclick="window.location.href='404.html'">Travel with baby</button>
+      <button onclick="window.location.href='404.html'">First foods</button>
+      <button onclick="window.location.href='404.html'">Gift guides</button>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand" style="align-items:flex-start;text-align:left">
+            <img src="Assets/logo_white (4).webp" alt="Stackly" class="footer-logo">
+          </a>
+          <p>A small, considered baby &amp; kids studio — organic fabrics, playful shapes and pieces made to be handed down. Founded 2016, still stitched with the same care.</p>
+          <div class="footer-addr">
+            <div><i class="fa-solid fa-location-dot"></i><span>MMR Complex, Periyakollappatty, Chinna Thirupathi, Salem, Tamil Nadu 636008</span></div>
+            <div><i class="fa-solid fa-phone"></i><span>+91 70107 92745</span></div>
+            <div><i class="fa-solid fa-envelope"></i><span>info@thestackly.com</span></div>
+          </div>
+          <div class="footer-social">
+            <a href="404.html" data-social-404 aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="404.html" data-social-404 aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="404.html" data-social-404 aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+            <a href="404.html" data-social-404 aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>Quick Links <i class="fa-solid fa-circle-down show-mobile"></i></h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="nursery.html">Nursery</a></li>
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="blog.html">Journal</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Company <i class="fa-solid fa-circle-down show-mobile"></i></h5>
+          <ul>
+            <li><a href="404.html">Our Story</a></li>
+            <li><a href="404.html">Journal</a></li>
+            <li><a href="404.html">Contact</a></li>
+            <li><a href="404.html">Sign In</a></li>
+            <li><a href="404.html">Admin Portal</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Stay in the Loop <i class="fa-solid fa-circle-down show-mobile"></i></h5>
+          <ul>
+            <li style="color:rgba(251,246,239,.78);font-size:14.5px;">Nursery ideas, restock alerts and 10% off your first order.</li>
+          </ul>
+          <form class="newsletter-mini" data-newsletter>
+            <input type="email" required placeholder="Your email address" aria-label="Email address">
+            <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+          </form>
+          <p data-newsletter-error style="display:none; color:#e74c3c; font-size:12px; margin-top:6px;">Only Gmail addresses are allowed.</p>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>&copy; 2026 Stackly Baby &amp; Kids Co. All rights reserved.</span>
+      <div class="pay-icons">
+        <i class="fa-brands fa-cc-visa"></i>
+        <i class="fa-brands fa-cc-mastercard"></i>
+        <i class="fa-brands fa-cc-paypal"></i>
+        <i class="fa-brands fa-cc-apple-pay"></i>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" aria-label="Back to top"><i class="fa-solid fa-circle-up"></i></button>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>

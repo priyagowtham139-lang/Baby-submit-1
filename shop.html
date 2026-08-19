@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shop All — Stackly Baby & Kids</title>
+<meta name="description" content="Shop organic baby and kids clothing, sleepwear, toys and gift sets at Stackly.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+<header class="site-header">
+    <div class="header-inner">
+      <div class="header-side left">
+        <nav class="main-nav" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="nursery.html">Nursery</a>
+          <a href="about.html">Our Story</a>
+          <a href="blog.html">Journal</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+
+      <a href="index.html" class="brand">
+        <img src="Assets/logo_black (4).webp" alt="Stackly" class="brand-logo">
+      </a>
+
+      <div class="header-side right">
+        <button class="icon-btn hide-mobile" id="wishBtn" aria-label="Wishlist" onclick="location.href='wishlist.html'">
+          <i class="fa-solid fa-heart"></i><span class="badge" id="wishBadge">0</span>
+        </button>
+        <button class="icon-btn hide-mobile" id="cartBtn" aria-label="Cart" onclick="location.href='cart.html'">
+          <i class="fa-solid fa-bag-shopping"></i><span class="badge" id="cartBadge">0</span>
+        </button>
+        <a href="login.html" class="btn-signin hide-mobile"><i class="fa-solid fa-user"></i><span>Sign In</span></a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav" id="mobileNav">
+    <div class="scrim"></div>
+    <div class="panel">
+      <div class="mobile-nav-top">
+        <a href="index.html" class="brand">
+          <span class="brand-mark"><i class="fa-solid fa-leaf fa-fw"></i></span>
+          <span class="brand-name">Stackly</span>
+        </a>
+        <button class="mobile-close" id="mobileNavClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <ul>
+        <li><a href="index.html"><span>Home</span><i class="fa-solid fa-circle-right"></i></a></li>
+        <li><a href="shop.html"><span>Shop</span><i class="fa-solid fa-circle-right"></i></a></li>
+        <li><a href="nursery.html"><span>Nursery</span><i class="fa-solid fa-circle-right"></i></a></li>
+        <li><a href="about.html"><span>Our Story</span><i class="fa-solid fa-circle-right"></i></a></li>
+        <li><a href="blog.html"><span>Journal</span><i class="fa-solid fa-circle-right"></i></a></li>
+        <li><a href="contact.html"><span>Contact</span><i class="fa-solid fa-circle-right"></i></a></li>
+      </ul>
+      <div class="mobile-nav-actions">
+        <a href="wishlist.html" class="btn btn-outline btn-block"><i class="fa-solid fa-heart"></i> Wishlist <span class="badge" id="wishBadgeMob">0</span></a>
+        <a href="cart.html" class="btn btn-outline btn-block"><i class="fa-solid fa-bag-shopping"></i> My Bag <span class="badge" id="cartBadgeMob">0</span></a>
+        <a href="login.html" class="btn btn-primary btn-block"><i class="fa-solid fa-user"></i> Sign In</a>
+      </div>
+      <div class="mobile-nav-foot">
+        <a href="404.html" data-social-404 aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="404.html" data-social-404 aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="404.html" data-social-404 aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+        <a href="404.html" data-social-404 aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+      </div>
+    </div>
+  </div>
+
+<main>
+<!-- 1. PAGE BANNER -->
+<section class="hero">
+  <div class="hero-slides">
+    <div class="hero-slide active" style="background-image:url('Assets/Shop1.webp')"></div>
+    <div class="hero-slide" style="background-image:url('Assets/shop2.webp')"></div>
+    <div class="hero-slide" style="background-image:url('Assets/shop3.webp')"></div>
+  </div>
+</section>
+
+<!-- 2. FILTER + PRODUCT GRID -->
+<section class="section" id="shop-grid">
+  <div class="container">
+    <div class="filter-bar">
+      <div class="filter-chips">
+        <button class="active">All</button>
+        <button>Newborn</button>
+        <button>Toddler</button>
+        <button>Sleepwear</button>
+        <button>Toys</button>
+        <button>Gift Sets</button>
+        <button>Rompers</button>
+        <button>Swaddles</button>
+        <button>Clothing</button>
+        <button>Nursery</button>
+        <button>Playtime</button>
+      </div>
+      <div class="sort-select">
+        <label for="sortBy" class="hide-mobile" style="font-size:13px;color:var(--ink-soft);">Sort</label>
+        <select id="sortBy">
+          <option>Popular</option>
+          <option>Newest</option>
+          <option>Price: Low to High</option>
+          <option>Price: High to Low</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="product-grid stagger">
+      <article class="product-card reveal">
+        <div class="product-media"><span class="chip chip-new" style="position:absolute;left:10px;top:10px;z-index:2;">New</span>
+          <img src="Assets/sleep_gown.webp" alt="Organic sleep gown">
+          <div class="product-actions"><button data-wish aria-label="Wishlist"><i class="fa-solid fa-heart"></i></button><button data-cart aria-label="Add to bag"><i class="fa-solid fa-bag-shopping"></i></button></div>
+        </div>
+        <div class="product-info"><span class="p-cat">Sleepwear</span><h4>Cloud Sleep Gown</h4><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div><div class="product-price"><span class="now">$34</span></div></div>
+      </article>
+      <article class="product-card reveal">
+        <div class="product-media"><span class="chip chip-sale" style="position:absolute;left:10px;top:10px;z-index:2;">-20%</span>
+          <img src="Assets/Romber.webp" alt="Knit romper">
+          <div class="product-actions"><button data-wish aria-label="Wishlist"><i class="fa-solid fa-heart"></i></button><button data-cart aria-label="Add to bag"><i class="fa-solid fa-bag-shopping"></i></button></div>
+        </div>
+        <div class="product-info"><span class="p-cat">Rompers</span><h4>Meadow Knit Romper</h4><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><div class="product-price"><span class="now">$28</span><span class="was">$35</span></div></div>
+      </article>
+      <article class="product-card reveal">
+        <div class="product-media"><img src="Assets/stacker.webp" alt="Wooden stacking toy">
+          <div class="product-actions"><button data-wish aria-label="Wishlist"><i class="fa-solid fa-heart"></i></button><button data-cart aria-label="Add to bag"><i class="fa-solid fa-bag-shopping"></i></button></div>
+        </div>
+        <div class="product-info"><span class="p-cat">Toys</span><h4>Rainbow Stacker</h4><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div><div class="product-price"><span class="now">$22</span></div></div>
+      </article>
+      <article class="product-card reveal">
+        <div class="product-media"><img src="Assets/Muslin.webp" alt="Muslin swaddle set">
+          <div class="product-actions"><button data-wish aria-label="Wishlist"><i class="fa-solid fa-heart"></i></button><button data-cart aria-label="Add to bag"><i class="fa-solid fa-bag-shopping"></i></button></div>
+        </div>
+        <div class="product-info"><span class="p-cat">Swaddles</span><h4>Dusk Muslin Set of 3</h4><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><div class="product-price"><span class="now">$32</span></div></div>
+      </article>
+      <article class="product-card reveal">
+        <div class="product-media"><img src="Assets/Acorn_Knit_Cardigan.webp" alt="Knit cardigan">
+          <div class="product-actions"><button data-wish aria-label="Wishlist"><i class="fa-solid fa-heart"></i></button><button data-cart aria-label="Add to bag"><i class="fa-solid fa-bag-shopping"></i></button></div>
+        </div>
+        <div class="product-info"><span class="p-cat">Toddler</span><h4>Acorn Knit Cardigan</h4><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><div class="product-price"><span class="now">$40</span></div></div>
+      </article>
+      <article class="product-card reveal">
+        <div class="product-media"><img src="Assets/Sprout_Denim_Overalls.webp" alt="Playtime overalls">
+          <div class="product-actions"><button data-wish aria-label="Wishlist"><i class="fa-solid fa-heart"></i></button><button data-cart aria-label="Add to bag"><i class="fa-solid fa-bag-shopping"></i></button></div>
+        </div>
+        <div class="product-info"><span class="p-cat">Toddler</span><h4>Sprout Denim Overalls</h4><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div><div class="product-price"><span class="now">$38</span></div></div>
+      </article>
+      <article class="product-card reveal">
+        <div class="product-media"><img src="Assets/Welcome_Home_Gift_Box.webp" alt="Gift box set">
+          <div class="product-actions"><button data-wish aria-label="Wishlist"><i class="fa-solid fa-heart"></i></button><button data-cart aria-label="Add to bag"><i class="fa-solid fa-bag-shopping"></i></button></div>
+        </div>
+        <div class="product-info"><span class="p-cat">Gift Sets</span><h4>Welcome Home Gift Box</h4><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><div class="product-price"><span class="now">$56</span></div></div>
+      </article>
+      <article class="product-card reveal">
+        <div class="product-media"><img src="Assets/First_Days_Playsuit.webp" alt="Playsuit set">
+          <div class="product-actions"><button data-wish aria-label="Wishlist"><i class="fa-solid fa-heart"></i></button><button data-cart aria-label="Add to bag"><i class="fa-solid fa-bag-shopping"></i></button></div>
+        </div>
+        <div class="product-info"><span class="p-cat">Newborn</span><h4>First Days Playsuit</h4><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><div class="product-price"><span class="now">$26</span></div></div>
+      </article>
+      <article class="product-card reveal">
+        <div class="product-media">
+          <span class="chip chip-new" style="position:absolute;left:10px;top:10px;z-index:2;">New</span>
+          <img src="Assets/Baby_Basics_Bundle.webp" alt="Baby basics set">
+          <div class="product-actions"><button data-wish aria-label="Wishlist"><i class="fa-solid fa-heart"></i></button><button data-cart aria-label="Add to bag"><i class="fa-solid fa-bag-shopping"></i></button></div>
+        </div>
+        <div class="product-info"><span class="p-cat">Clothing</span><h4>Baby Basics Bundle</h4><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><div class="product-price"><span class="now">$42</span></div></div>
+      </article>
+      <article class="product-card reveal">
+        <div class="product-media">
+          <img src="Assets/Welcome_Home_Set.webp" alt="Newborn set">
+          <div class="product-actions"><button data-wish aria-label="Wishlist"><i class="fa-solid fa-heart"></i></button><button data-cart aria-label="Add to bag"><i class="fa-solid fa-bag-shopping"></i></button></div>
+        </div>
+        <div class="product-info"><span class="p-cat">Newborn</span><h4>Welcome Home Set</h4><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><div class="product-price"><span class="now">$38</span></div></div>
+      </article>
+      <article class="product-card reveal">
+        <div class="product-media">
+          <span class="chip chip-sale" style="position:absolute;left:10px;top:10px;z-index:2;">-10%</span>
+          <img src="Assets/Nursery_Essentials.webp" alt="Nursery decor">
+          <div class="product-actions"><button data-wish aria-label="Wishlist"><i class="fa-solid fa-heart"></i></button><button data-cart aria-label="Add to bag"><i class="fa-solid fa-bag-shopping"></i></button></div>
+        </div>
+        <div class="product-info"><span class="p-cat">Nursery</span><h4>Nursery Essentials</h4><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div><div class="product-price"><span class="now">$45</span><span class="was">$50</span></div></div>
+      </article>
+      <article class="product-card reveal">
+        <div class="product-media">
+          <img src="Assets/Soft_Play_Cloud.webp" alt="Playtime toy">
+          <div class="product-actions"><button data-wish aria-label="Wishlist"><i class="fa-solid fa-heart"></i></button><button data-cart aria-label="Add to bag"><i class="fa-solid fa-bag-shopping"></i></button></div>
+        </div>
+        <div class="product-info"><span class="p-cat">Playtime</span><h4>Soft Play Cloud</h4><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><div class="product-price"><span class="now">$19</span></div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 3. COLLECTION BANNER -->
+<section class="section" style="padding-top:0;">
+  <div class="container">
+    <div class="collection-banner reveal-scale">
+      <img src="Assets/Naptime.webp" alt="Nursery collection">
+      <div class="cb-copy">
+        <span class="chip chip-new">Limited run</span>
+        <h2>The Nap-Time Nursery Edit</h2>
+        <p>Coordinated bedding, wall decor and night lights, designed as one calm collection.</p>
+        <a href="nursery.html" class="btn btn-gold mt-3">Explore the edit <i class="fa-solid fa-circle-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. SIZE GUIDE -->
+<section class="section" style="padding-top:0;">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow"><i class="fa-solid fa-ruler"></i> Fit guide</span>
+      <h2>Find their size in seconds</h2>
+      <p>All Stackly pieces run true-to-size with a little extra room to grow into.</p>
+    </div>
+    <div class="size-table-wrap reveal">
+      <table class="size-table">
+        <thead><tr><th>Age</th><th>Weight</th><th>Height</th><th>Size Label</th></tr></thead>
+        <tbody>
+          <tr><td>0–3 months</td><td>6–13 lbs</td><td>Up to 24"</td><td>NB</td></tr>
+          <tr><td>3–6 months</td><td>13–17 lbs</td><td>24–27"</td><td>S</td></tr>
+          <tr><td>6–12 months</td><td>17–22 lbs</td><td>27–30"</td><td>M</td></tr>
+          <tr><td>1–2 years</td><td>22–28 lbs</td><td>30–34"</td><td>L</td></tr>
+          <tr><td>2–4 years</td><td>28–38 lbs</td><td>34–40"</td><td>XL</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 5. WHY BLOOMWICK -->
+<section class="section" style="padding-top:0; background:var(--gray); border-radius:var(--radius-lg); margin:0 16px;">
+  <div class="container">
+    <div class="section-head center" style="margin-left:auto;margin-right:auto;">
+      <span class="eyebrow"><i class="fa-solid fa-heart"></i> Why families choose us</span>
+      <h2>Made with more care than it needs to be.</h2>
+    </div>
+    <div class="why-grid stagger">
+      <div class="reveal-scale" style="background:#fff; border-radius:var(--radius-md); padding:32px 24px; text-align:center; border:1px solid var(--line); transition:transform .3s ease, box-shadow .3s ease;" onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 16px 40px -12px rgba(0,0,0,.18)';" onmouseout="this.style.transform=''; this.style.boxShadow='';">
+        <div style="width:56px;height:56px;border-radius:50%;background:rgba(226,26,90,.1);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:22px;color:var(--pink);"><i class="fa-solid fa-leaf"></i></div>
+        <h4 style="margin-bottom:8px;">Organic, always</h4>
+        <p style="font-size:14px;color:var(--ink-soft);line-height:1.6;">GOTS-certified cotton, dyed with low-impact pigments — gentle on skin.</p>
+      </div>
+      <div class="reveal-scale" style="background:#fff; border-radius:var(--radius-md); padding:32px 24px; text-align:center; border:1px solid var(--line); transition:transform .3s ease, box-shadow .3s ease;" onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 16px 40px -12px rgba(0,0,0,.18)';" onmouseout="this.style.transform=''; this.style.boxShadow='';">
+        <div style="width:56px;height:56px;border-radius:50%;background:rgba(226,26,90,.1);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:22px;color:var(--pink);"><i class="fa-solid fa-shirt"></i></div>
+        <h4 style="margin-bottom:8px;">Grows with them</h4>
+        <p style="font-size:14px;color:var(--ink-soft);line-height:1.6;">Generous sizing and stretchy knits that last more than one season.</p>
+      </div>
+      <div class="reveal-scale" style="background:#fff; border-radius:var(--radius-md); padding:32px 24px; text-align:center; border:1px solid var(--line); transition:transform .3s ease, box-shadow .3s ease;" onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 16px 40px -12px rgba(0,0,0,.18)';" onmouseout="this.style.transform=''; this.style.boxShadow='';">
+        <div style="width:56px;height:56px;border-radius:50%;background:rgba(226,26,90,.1);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:22px;color:var(--pink);"><i class="fa-solid fa-rotate-left"></i></div>
+        <h4 style="margin-bottom:8px;">60-day returns</h4>
+        <p style="font-size:14px;color:var(--ink-soft);line-height:1.6;">Changed your mind? No stress — send it back within 60 days, free.</p>
+      </div>
+      <div class="reveal-scale" style="background:#fff; border-radius:var(--radius-md); padding:32px 24px; text-align:center; border:1px solid var(--line); transition:transform .3s ease, box-shadow .3s ease;" onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 16px 40px -12px rgba(0,0,0,.18)';" onmouseout="this.style.transform=''; this.style.boxShadow='';">
+        <div style="width:56px;height:56px;border-radius:50%;background:rgba(226,26,90,.1);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:22px;color:var(--pink);"><i class="fa-solid fa-hand-holding-heart"></i></div>
+        <h4 style="margin-bottom:8px;">1 item donated</h4>
+        <p style="font-size:14px;color:var(--ink-soft);line-height:1.6;">Every order helps a child in need — one garment donated per purchase.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. FAQ -->
+<section class="section" style="padding-top:0;">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow"><i class="fa-solid fa-circle-question"></i> Good to know</span>
+      <h2>Shipping &amp; returns</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q">How long does shipping take? <i class="fa-solid fa-circle-down"></i></button>
+        <div class="faq-a"><p>Orders ship within 1–2 business days and arrive in 3–6 days domestically, 7–14 days internationally.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What is your return policy? <i class="fa-solid fa-circle-down"></i></button>
+        <div class="faq-a"><p>Unworn items can be returned within 60 days for a full refund or store credit — no questions asked.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Do you offer a size exchange? <i class="fa-solid fa-circle-down"></i></button>
+        <div class="faq-a"><p>Yes, free size exchanges within 90 days of delivery — just start a request from your account.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Are your dyes safe for sensitive skin? <i class="fa-solid fa-circle-down"></i></button>
+        <div class="faq-a"><p>All dyes are OEKO-TEX certified and free from azo compounds, formaldehyde and heavy metals.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand" style="align-items:flex-start;text-align:left">
+            <img src="Assets/logo_white (4).webp" alt="Stackly" class="footer-logo">
+          </a>
+          <p>A small, considered baby &amp; kids studio — organic fabrics, playful shapes and pieces made to be handed down. Founded 2016, still stitched with the same care.</p>
+          <div class="footer-addr">
+            <div><i class="fa-solid fa-location-dot"></i><span>MMR Complex, Periyakollappatty, Chinna Thirupathi, Salem, Tamil Nadu 636008</span></div>
+            <div><i class="fa-solid fa-phone"></i><span>+91 70107 92745</span></div>
+            <div><i class="fa-solid fa-envelope"></i><span>info@thestackly.com</span></div>
+          </div>
+          <div class="footer-social">
+            <a href="404.html" data-social-404 aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="404.html" data-social-404 aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="404.html" data-social-404 aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+            <a href="404.html" data-social-404 aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>Quick Links <i class="fa-solid fa-circle-down show-mobile"></i></h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="nursery.html">Nursery</a></li>
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="blog.html">Journal</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Company <i class="fa-solid fa-circle-down show-mobile"></i></h5>
+          <ul>
+            <li><a href="404.html">Our Story</a></li>
+            <li><a href="404.html">Journal</a></li>
+            <li><a href="404.html">Contact</a></li>
+            <li><a href="404.html">Sign In</a></li>
+            <li><a href="404.html">Admin Portal</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Stay in the Loop <i class="fa-solid fa-circle-down show-mobile"></i></h5>
+          <ul>
+            <li style="color:rgba(251,246,239,.78);font-size:14.5px;">Nursery ideas, restock alerts and 10% off your first order.</li>
+          </ul>
+          <form class="newsletter-mini" data-newsletter>
+            <input type="email" required placeholder="Your email address" aria-label="Email address">
+            <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+          </form>
+          <p data-newsletter-error style="display:none; color:#e74c3c; font-size:12px; margin-top:6px;">Only Gmail addresses are allowed.</p>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>&copy; 2026 Stackly Baby &amp; Kids Co. All rights reserved.</span>
+      <div class="pay-icons">
+        <i class="fa-brands fa-cc-visa"></i>
+        <i class="fa-brands fa-cc-mastercard"></i>
+        <i class="fa-brands fa-cc-paypal"></i>
+        <i class="fa-brands fa-cc-apple-pay"></i>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" aria-label="Back to top"><i class="fa-solid fa-circle-up"></i></button>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+/* =========================================================
+   LOGIN / SIGNUP — Modern split layout
+   ========================================================= */
+
+/* body override — no default header/footer */
+.auth-body{ margin:0; background:var(--gray); overflow-x:hidden; }
+
+/* ---------- top bar ---------- */
+.auth-topbar{
+  position:fixed; top:0; left:0; right:0; z-index:100; height:var(--header-h);
+  display:flex; align-items:center; justify-content:space-between;
+  padding:0 clamp(16px,3vw,40px); background:rgba(255,255,255,.92); backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.auth-topbar-link{
+  font-size:14px; font-weight:700; color:var(--pink); display:flex; align-items:center; gap:6px;
+  transition:gap .3s var(--ease);
+}
+.auth-topbar-link:hover{ gap:10px; }
+
+/* ---------- page layout ---------- */
+.auth-page{
+  display:grid; grid-template-columns:1fr 1fr; min-height:100vh; margin-top:var(--header-h);
+}
+
+/* ---------- left visual panel ---------- */
+.auth-visual{
+  position:relative; background:var(--ink); color:#fff; display:flex; flex-direction:column;
+  padding:clamp(32px,5vw,60px); overflow:hidden;
+}
+.av-blob{ position:absolute; border-radius:50%; }
+.av-blob-1{ width:400px; height:400px; background:radial-gradient(circle, rgba(242,230,0,.25), transparent 70%); top:-100px; left:-100px; }
+.av-blob-2{ width:300px; height:300px; background:radial-gradient(circle, rgba(226,26,90,.2), transparent 70%); bottom:-80px; right:-60px; }
+.av-content{ position:relative; z-index:2; margin:auto; max-width:400px; }
+.av-icon{
+  width:64px; height:64px; border-radius:20px; background:linear-gradient(135deg, var(--pink), var(--yellow));
+  display:flex; align-items:center; justify-content:center; font-size:28px; margin-bottom:24px;
+}
+.av-content h2{ font-family:var(--font-display); font-size:clamp(28px,4vw,38px); color:#fff; margin-bottom:12px; }
+.av-content p{ color:rgba(255,255,255,.7); font-size:16px; line-height:1.7; }
+.av-features{ margin-top:36px; display:flex; flex-direction:column; gap:14px; }
+.av-feat{ display:flex; align-items:center; gap:12px; font-size:14px; color:rgba(255,255,255,.85); }
+.av-feat i{ width:36px; height:36px; border-radius:10px; background:rgba(255,255,255,.1); display:flex; align-items:center; justify-content:center; color:var(--yellow); font-size:14px; }
+.av-footer{ position:relative; z-index:2; font-size:12px; color:rgba(255,255,255,.4); margin-top:auto; padding-top:24px; }
+
+/* ---------- right form panel ---------- */
+.auth-form-panel{
+  display:flex; align-items:center; justify-content:center; padding:clamp(24px,4vw,48px);
+  background:#fff;
+}
+.afp-inner{ width:100%; max-width:420px; }
+
+/* ---------- form header ---------- */
+.afp-header{ margin-bottom:28px; }
+.afp-header h1{ font-family:var(--font-display); font-size:clamp(24px,3vw,30px); color:var(--ink); }
+.afp-header p{ margin-top:8px; color:var(--ink-soft); font-size:15px; }
+
+/* ---------- role pills ---------- */
+.role-pills{ display:flex; gap:10px; margin-bottom:24px; }
+.role-pill{
+  flex:1; padding:12px; border:2px solid var(--line); border-radius:var(--radius-md);
+  background:var(--gray); font-weight:700; font-size:13.5px; color:var(--ink-soft);
+  display:flex; align-items:center; justify-content:center; gap:8px;
+  transition:all .3s var(--ease);
+}
+.role-pill.active{ background:var(--pink-tint); border-color:var(--pink); color:var(--pink); }
+.role-pill:hover:not(.active){ border-color:var(--ink); color:var(--ink); }
+
+/* ---------- form show/hide ---------- */
+.auth-form{ display:none; }
+.auth-form.active{ display:block; animation:authFade .4s var(--ease); }
+@keyframes authFade{ from{ opacity:0; transform:translateY(12px); } to{ opacity:1; transform:translateY(0); } }
+
+/* ---------- fields ---------- */
+.field{ margin-bottom:18px; }
+.field label{ display:block; font-size:13px; font-weight:700; color:var(--ink); margin-bottom:6px; }
+.field-error{ display:block; font-size:12px; color:var(--pink); margin-top:4px; min-height:16px; }
+.input-wrap.error{ border-color:var(--pink); }
+.input-wrap{
+  position:relative; display:flex; align-items:center; gap:10px;
+  border:2px solid var(--line); border-radius:var(--radius-md); padding:0 14px;
+  background:var(--gray); transition:border-color .3s, box-shadow .3s;
+}
+.input-wrap:focus-within{ border-color:var(--pink); box-shadow:0 0 0 4px var(--pink-tint); }
+.input-wrap i{ color:var(--ink-soft); font-size:14px; flex-shrink:0; }
+.input-wrap input{
+  flex:1; border:none; background:none; padding:13px 0; font-size:14.5px; color:var(--ink);
+  outline:none; width:100%;
+}
+.input-wrap input::placeholder{ color:var(--ink-soft); }
+.field-row{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+
+/* ---------- password toggle ---------- */
+.pw-toggle{
+  flex-shrink:0; width:32px; height:32px; border-radius:8px; border:none; background:none;
+  color:var(--ink-soft); display:flex; align-items:center; justify-content:center;
+  font-size:14px; transition:color .25s, background .25s;
+}
+.pw-toggle:hover{ color:var(--pink); background:var(--pink-tint); }
+
+/* ---------- row / links ---------- */
+.afp-row{ display:flex; align-items:center; justify-content:space-between; margin:4px 0 22px; flex-wrap:wrap; gap:10px; }
+.check-label{ display:flex; align-items:center; gap:8px; font-size:13px; color:var(--ink-soft); cursor:pointer; }
+.check-label input{ accent-color:var(--pink); width:16px; height:16px; }
+.afp-link{ font-size:13px; font-weight:700; color:var(--pink); text-decoration:none; }
+.afp-link:hover{ text-decoration:underline; }
+
+/* ---------- submit button ---------- */
+.afp-submit{
+  padding:15px 24px; font-size:15px; display:flex; align-items:center; justify-content:center; gap:10px;
+  border-radius:var(--radius-md); border:none; cursor:pointer; font-weight:700;
+  background:var(--pink); color:#fff; width:100%; transition:all .3s var(--ease);
+}
+.afp-submit:hover{ background:var(--pink-deep); transform:translateY(-2px); box-shadow:0 8px 24px -8px rgba(226,26,90,.4); }
+
+/* ---------- switch link ---------- */
+.afp-switch{ text-align:center; margin-top:24px; font-size:14px; color:var(--ink-soft); }
+.link-btn{ background:none; border:none; color:var(--pink); font-weight:700; cursor:pointer; text-decoration:underline; text-underline-offset:3px; font-size:14px; }
+
+/* ---------- native reveal icons fix ---------- */
+.input-wrap input::-ms-reveal,
+.input-wrap input::-ms-clear,
+.pw-wrap input::-ms-reveal,
+.pw-wrap input::-ms-clear{ display:none; width:0; height:0; }
+
+.input-wrap input::-webkit-reveal-button,
+.pw-wrap input::-webkit-reveal-button{ display:none; }
+
+/* ---------- responsive ---------- */
+@media (max-width:900px){
+  .auth-page{ grid-template-columns:1fr; }
+  .auth-visual{ display:none; }
+  .auth-form-panel{ padding:clamp(24px,6vw,40px) clamp(16px,4vw,32px); }
+  .auth-topbar{ background:rgba(255,255,255,.96); }
+}
+@media (max-width:480px){
+  .field-row{ grid-template-columns:1fr; }
+  .afp-header h1{ font-size:22px; }
+}

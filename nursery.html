@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nursery & Decor — Stackly Baby & Kids</title>
+<meta name="description" content="Curated nursery furniture, bedding, lighting and wall art collections from Stackly.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+<header class="site-header">
+    <div class="header-inner">
+      <div class="header-side left">
+        <nav class="main-nav" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="nursery.html">Nursery</a>
+          <a href="about.html">Our Story</a>
+          <a href="blog.html">Journal</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+
+      <a href="index.html" class="brand">
+        <img src="Assets/logo_black (4).webp" alt="Stackly" class="brand-logo">
+      </a>
+
+      <div class="header-side right">
+        <button class="icon-btn hide-mobile" id="wishBtn" aria-label="Wishlist" onclick="location.href='wishlist.html'">
+          <i class="fa-solid fa-heart"></i><span class="badge" id="wishBadge">0</span>
+        </button>
+        <button class="icon-btn hide-mobile" id="cartBtn" aria-label="Cart" onclick="location.href='cart.html'">
+          <i class="fa-solid fa-bag-shopping"></i><span class="badge" id="cartBadge">0</span>
+        </button>
+        <a href="login.html" class="btn-signin hide-mobile"><i class="fa-solid fa-user"></i><span>Sign In</span></a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav" id="mobileNav">
+    <div class="scrim"></div>
+    <div class="panel">
+      <div class="mobile-nav-top">
+        <a href="index.html" class="brand">
+          <span class="brand-mark"><i class="fa-solid fa-leaf fa-fw"></i></span>
+          <span class="brand-name">Stackly</span>
+        </a>
+        <button class="mobile-close" id="mobileNavClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <ul>
+        <li><a href="index.html"><span>Home</span><i class="fa-solid fa-circle-right"></i></a></li>
+        <li><a href="shop.html"><span>Shop</span><i class="fa-solid fa-circle-right"></i></a></li>
+        <li><a href="nursery.html"><span>Nursery</span><i class="fa-solid fa-circle-right"></i></a></li>
+        <li><a href="about.html"><span>Our Story</span><i class="fa-solid fa-circle-right"></i></a></li>
+        <li><a href="blog.html"><span>Journal</span><i class="fa-solid fa-circle-right"></i></a></li>
+        <li><a href="contact.html"><span>Contact</span><i class="fa-solid fa-circle-right"></i></a></li>
+      </ul>
+      <div class="mobile-nav-actions">
+        <a href="wishlist.html" class="btn btn-outline btn-block"><i class="fa-solid fa-heart"></i> Wishlist <span class="badge" id="wishBadgeMob">0</span></a>
+        <a href="cart.html" class="btn btn-outline btn-block"><i class="fa-solid fa-bag-shopping"></i> My Bag <span class="badge" id="cartBadgeMob">0</span></a>
+        <a href="login.html" class="btn btn-primary btn-block"><i class="fa-solid fa-user"></i> Sign In</a>
+      </div>
+      <div class="mobile-nav-foot">
+        <a href="404.html" data-social-404 aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="404.html" data-social-404 aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="404.html" data-social-404 aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+        <a href="404.html" data-social-404 aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+      </div>
+    </div>
+  </div>
+
+<main>
+<!-- 1. PAGE BANNER -->
+<section class="hero">
+  <div class="hero-slides">
+    <div class="hero-slide active" style="background-image:url('Assets/Nursery1.webp')"></div>
+    <div class="hero-slide" style="background-image:url('Assets/Nursery2.webp')"></div>
+    <div class="hero-slide" style="background-image:url('Assets/Nursery_3.webp')"></div>
+  </div>
+</section>
+
+<!-- 2. ROOM INSPIRATION -->
+<section class="section">s
+  <div class="container">
+    <div class="section-head center" style="margin-left:auto;margin-right:auto;">
+      <span class="eyebrow"><i class="fa-solid fa-palette"></i> Choose a mood</span>
+      <h2>Three ways to dress the room</h2>
+    </div>
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:22px;">
+      <a href="#nursery-shop" class="cat-card spotlight-card shape-blob reveal-scale" style="aspect-ratio:4/5; width:calc(50% - 11px); max-width:380px;">
+        <img src="Assets/Cribs__1_ (1).webp" alt="Nursery furniture">
+        <div class="cat-copy"><h4>Furniture</h4><span>Cribs, dressers &amp; rockers</span></div>
+      </a>
+      <a href="#nursery-shop" class="cat-card spotlight-card shape-squircle reveal-scale" style="aspect-ratio:4/5; width:calc(50% - 11px); max-width:380px;">
+        <img src="Assets/bedding.webp" alt="Nursery bedding">
+        <div class="cat-copy"><h4>Bedding</h4><span>Sheets, quilts &amp; blankets</span></div>
+      </a>
+      <a href="#nursery-shop" class="cat-card spotlight-card shape-hex reveal-scale" style="aspect-ratio:4/5; width:calc(50% - 11px); max-width:380px;">
+        <img src="Assets/Night_light.webp" alt="Nursery lighting">
+        <div class="cat-copy"><h4>Lighting</h4><span>Night lights &amp; lamps</span></div>
+      </a>
+    </div>
+  </div>s
+</section>s
+
+<!-- 3. PRODUCT GRID -->
+<section class="section" id="nursery-shop" style="padding-top:0;">
+  <div class="container">
+    <div class="filter-bar">
+      <div class="filter-chips">
+        <button class="active">All decor</button>
+        <button>Furniture</button>
+        <button>Bedding</button>
+        <button>Lighting</button>
+        <button>Wall art</button>
+      </div>
+    </div>
+    <div class="product-grid stagger">
+      <article class="product-card reveal">
+        <div class="product-media"><img src="Assets/oak_crib.webp" alt="Oak crib">
+          <div class="product-actions"><button data-wish aria-label="Wishlist"><i class="fa-solid fa-heart"></i></button><button data-cart aria-label="Add to bag"><i class="fa-solid fa-bag-shopping"></i></button></div></div>
+        <div class="product-info"><span class="p-cat">Furniture</span><h4>Bramble Oak Crib</h4><div class="product-price"><span class="now">$420</span></div></div>
+      </article>
+      <article class="product-card reveal">
+        <div class="product-media"><img src="Assets/Cloud_Night_Light.webp" alt="Cloud night light">
+          <div class="product-actions"><button data-wish aria-label="Wishlist"><i class="fa-solid fa-heart"></i></button><button data-cart aria-label="Add to bag"><i class="fa-solid fa-bag-shopping"></i></button></div></div>
+        <div class="product-info"><span class="p-cat">Lighting</span><h4>Cloud Night Light</h4><div class="product-price"><span class="now">$38</span></div></div>
+      </article>
+      <article class="product-card reveal">
+        <div class="product-media"><img src="Assets/Meadow_Crib_Set.webp" alt="Crib bedding set">
+          <div class="product-actions"><button data-wish aria-label="Wishlist"><i class="fa-solid fa-heart"></i></button><button data-cart aria-label="Add to bag"><i class="fa-solid fa-bag-shopping"></i></button></div></div>
+        <div class="product-info"><span class="p-cat">Bedding</span><h4>Meadow Crib Set</h4><div class="product-price"><span class="now">$96</span></div></div>
+      </article>
+      <article class="product-card reveal">
+        <div class="product-media"><img src="Assets/Wandering_Animals_Trio.webp" alt="Framed wall art set">
+          <div class="product-actions"><button data-wish aria-label="Wishlist"><i class="fa-solid fa-heart"></i></button><button data-cart aria-label="Add to bag"><i class="fa-solid fa-bag-shopping"></i></button></div></div>
+        <div class="product-info"><span class="p-cat">Wall Art</span><h4>Wandering Animals Trio</h4><div class="product-price"><span class="now">$64</span></div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 4. ROOM TOUR VIDEO -->
+<section class="section" style="padding-top:0;">
+  <div class="container video-grid">
+    <div class="section-head" style="margin-bottom:0; padding-right:20px;">
+      <span class="eyebrow"><i class="fa-solid fa-video"></i> Room tour</span>
+      <h2>Inside a Meadow-palette nursery</h2>
+      <p>A two-minute walkthrough of how one family combined our crib, bedding and lighting into a calm, sleep-ready room.</p>
+      <a href="404.html" class="btn btn-primary" style="margin-top:32px; display:inline-block;"><i class="fa-solid fa-calendar-check"></i> Book a design chat</a>
+    </div>
+    <br>
+    <div class="video-frame reveal-scale">
+      <video preload="metadata" playsinline controls translate="no" disablePictureInPicture disableRemotePlayback controlsList="nodownload noplaybackrate noremoteplayback nopictureinpicture">
+        <source src="Assets/crib_compressed.mp4" type="video/mp4">
+      </video>
+      <button class="play-btn" aria-label="Play video"><i class="fa-solid fa-play"></i></button>
+    </div>
+  </div>
+</section>
+
+<!-- 5. DESIGN CHECKLIST -->
+<section class="section" style="padding-top:0; margin-top:24px;">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow"><i class="fa-solid fa-list-check"></i> Before you decorate</span>
+      <h2>A five-step nursery checklist</h2>
+    </div>
+    <div class="timeline stagger" style="max-width:720px;margin-left:auto;margin-right:auto;">
+      <div class="timeline-item reveal"><span class="yr">Step 1</span><h4>Pick a palette</h4><p>Choose Meadow, Clay or Skylight — every product on this page is built to match across all three.</p></div>
+      <div class="timeline-item reveal"><span class="yr">Step 2</span><h4>Plan the crib zone</h4><p>Keep the crib away from windows and cords, with the night light within reach but not overhead.</p></div>
+      <div class="timeline-item reveal"><span class="yr">Step 3</span><h4>Layer soft textures</h4><p>Add the crib set, a floor rug and one framed print — three textures is usually enough.</p></div>
+      <div class="timeline-item reveal"><span class="yr">Step 4</span><h4>Lighting last</h4><p>Add a dimmable night light for 2am feeds — it's the single most-used piece in the room.</p></div>
+      <div class="timeline-item reveal"><span class="yr">Step 5</span><h4>Leave growing room</h4><p>Our crib converts to a toddler bed — no need to re-buy furniture at 18 months.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. CTA -->
+<section class="section" style="padding-top:0;">
+  <div class="container">
+    <div class="simple-cta reveal-scale">
+      <span class="eyebrow"><i class="fa-solid fa-comments"></i> Not sure where to start</span>
+      <h2 class="mt-2">Get a free 15-minute nursery design chat</h2>
+      <p style="color:var(--ink-soft);max-width:52ch;margin:12px auto 0;">Our stylists will help you pick a palette, layout and shopping list — over video or by email.</p>
+      <a href="404.html" class="btn btn-primary">Book my free chat <i class="fa-solid fa-circle-right"></i></a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand" style="align-items:flex-start;text-align:left">
+            <img src="Assets/logo_white (4).webp" alt="Stackly" class="footer-logo">
+          </a>
+          <p>A small, considered baby &amp; kids studio — organic fabrics, playful shapes and pieces made to be handed down. Founded 2016, still stitched with the same care.</p>
+          <div class="footer-addr">
+            <div><i class="fa-solid fa-location-dot"></i><span>MMR Complex, Periyakollappatty, Chinna Thirupathi, Salem, Tamil Nadu 636008</span></div>
+            <div><i class="fa-solid fa-phone"></i><span>+91 70107 92745</span></div>
+            <div><i class="fa-solid fa-envelope"></i><span>info@thestackly.com</span></div>
+          </div>
+          <div class="footer-social">
+            <a href="404.html" data-social-404 aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="404.html" data-social-404 aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="404.html" data-social-404 aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+            <a href="404.html" data-social-404 aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>Quick Links <i class="fa-solid fa-circle-down show-mobile"></i></h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="nursery.html">Nursery</a></li>
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="blog.html">Journal</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Company <i class="fa-solid fa-circle-down show-mobile"></i></h5>
+          <ul>
+            <li><a href="404.html">Our Story</a></li>
+            <li><a href="404.html">Journal</a></li>
+            <li><a href="404.html">Contact</a></li>
+            <li><a href="404.html">Sign In</a></li>
+            <li><a href="404.html">Admin Portal</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Stay in the Loop <i class="fa-solid fa-circle-down show-mobile"></i></h5>
+          <ul>
+            <li style="color:rgba(251,246,239,.78);font-size:14.5px;">Nursery ideas, restock alerts and 10% off your first order.</li>
+          </ul>
+          <form class="newsletter-mini" data-newsletter>
+            <input type="email" required placeholder="Your email address" aria-label="Email address">
+            <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+          </form>
+          <p data-newsletter-error style="display:none; color:#e74c3c; font-size:12px; margin-top:6px;">Only Gmail addresses are allowed.</p>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>&copy; 2026 Stackly Baby &amp; Kids Co. All rights reserved.</span>
+      <div class="pay-icons">
+        <i class="fa-brands fa-cc-visa"></i>
+        <i class="fa-brands fa-cc-mastercard"></i>
+        <i class="fa-brands fa-cc-paypal"></i>
+        <i class="fa-brands fa-cc-apple-pay"></i>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" aria-label="Back to top"><i class="fa-solid fa-circle-up"></i></button>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>

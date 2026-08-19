@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sign In — Stackly</title>
+<meta name="description" content="Sign in to your Stackly parent or admin account.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/login.css">
+</head>
+<body class="auth-body">
+
+<header class="auth-topbar">
+  <a href="index.html" class="brand">
+    <img src="Assets/logo_black (4).webp" alt="Stackly" class="brand-logo">
+  </a>
+  <a href="index.html" class="auth-topbar-link"><i class="fa-solid fa-circle-left"></i> Go back home</a>
+</header>
+
+<main class="auth-page">
+  <!-- LEFT — decorative panel -->
+  <div class="auth-visual">
+    <div class="av-blob av-blob-1"></div>
+    <div class="av-blob av-blob-2"></div>
+    <div class="av-content">
+      <div class="av-icon"><i class="fa-solid fa-leaf"></i></div>
+      <h2>Stackly</h2>
+      <p>Premium organic baby &amp; kids essentials — made with love, built to last.</p>
+      <div class="av-features">
+        <div class="av-feat"><i class="fa-solid fa-truck-fast"></i><span>Free shipping over $60</span></div>
+        <div class="av-feat"><i class="fa-solid fa-rotate-left"></i><span>60-day easy returns</span></div>
+        <div class="av-feat"><i class="fa-solid fa-leaf"></i><span>100% organic cotton</span></div>
+      </div>
+    </div>
+    <div class="av-footer">&copy; 2026 Stackly Baby &amp; Kids Co.</div>
+  </div>
+
+  <!-- RIGHT — form panel -->
+  <div class="auth-form-panel">
+    <div class="afp-inner">
+
+      <!-- Sign In form -->
+      <div class="auth-form active" id="signinForm">
+        <div class="afp-header">
+          <h1>Welcome back</h1>
+          <p>Sign in to your account to continue</p>
+        </div>
+
+        <div class="role-pills">
+          <button class="role-pill active" data-role="user" type="button"><i class="fa-solid fa-user"></i> Parent</button>
+          <button class="role-pill" data-role="admin" type="button"><i class="fa-solid fa-user-shield"></i> Admin</button>
+        </div>
+
+        <form id="formSignin" novalidate>
+          <div class="field">
+            <label for="siEmail">Email</label>
+            <div class="input-wrap"><i class="fa-solid fa-envelope"></i><input id="siEmail" type="email" required placeholder="you@example.com" autocomplete="username"></div>
+            <span class="field-error" id="siEmailErr"></span>
+          </div>
+          <div class="field">
+            <label for="siPassword">Password</label>
+            <div class="input-wrap"><i class="fa-solid fa-lock"></i><input id="siPassword" type="password" required placeholder="Enter your password" autocomplete="current-password" minlength="6"><button type="button" class="pw-toggle" data-target="siPassword" aria-label="Show password"><i class="fa-solid fa-eye"></i></button></div>
+          </div>
+          <div class="afp-row">
+            <label class="check-label"><input type="checkbox"> Remember me</label>
+            <a href="404.html" class="afp-link">Forgot password?</a>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block afp-submit"><span id="signinBtnLabel">Sign in as Parent</span> <i class="fa-solid fa-circle-right"></i></button>
+        </form>
+
+        <p class="afp-switch">Don't have an account? <a href="signup.html" class="link-btn">Create one</a></p>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<script src="js/main.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Admin Dashboard — Stackly</title>
+<meta name="description" content="Manage products, orders and customers from the Stackly admin dashboard.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/login.css">
+</head>
+<body class="dash-body">
+
+<!-- MOBILE HEADER -->
+<header class="dash-mob-header">
+  <a href="index.html" class="brand">
+    <img src="Assets/logo_black (4).webp" alt="Stackly" class="brand-logo">
+  </a>
+  <button class="hamburger" id="dashHamburger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- MOBILE DRAWER -->
+<div class="dash-mob-drawer" id="dashDrawer">
+  <div class="dash-mob-scrim" id="dashScrim"></div>
+  <div class="dash-mob-panel">
+    <div class="dash-mob-top">
+      <a href="index.html" class="dash-logo">
+        <img src="Assets/logo_black (4).webp" alt="Stackly">
+      </a>
+    </div>
+    <div class="dash-profile">
+      <div class="dash-avatar" style="background:var(--pink);">AK</div>
+      <div><h5>Aria Kim</h5><span>Administrator</span></div>
+    </div>
+    <nav class="dash-nav">
+      <button data-panel="overview" data-title="Store Overview" class="active"><i class="fa-solid fa-gauge-high"></i> Overview</button>
+      <button data-panel="products" data-title="Products"><i class="fa-solid fa-shirt"></i> Products</button>
+      <button data-panel="orders" data-title="Order Queue"><i class="fa-solid fa-box"></i> Orders</button>
+      <button data-panel="customers" data-title="Customers"><i class="fa-solid fa-users"></i> Customers</button>
+      <button data-panel="marketing" data-title="Marketing"><i class="fa-solid fa-bullhorn"></i> Marketing</button>
+      <button data-panel="shipping" data-title="Shipping Zones"><i class="fa-solid fa-truck"></i> Shipping</button>
+      <button data-panel="settings" data-title="Store Settings"><i class="fa-solid fa-gear"></i> Settings</button>
+      <a href="login.html" data-logout class="dash-nav-link"><i class="fa-solid fa-right-from-bracket"></i> Sign out</a>
+    </nav>
+  </div>
+</div>
+
+<main>
+  <aside class="dash-sidebar">
+    <a href="index.html" class="dash-logo">
+      <img src="Assets/logo_black (4).webp" alt="Stackly">
+    </a>
+    <div class="dash-profile">
+      <div class="dash-avatar" style="background:var(--pink);">AK</div>
+      <div><h5>Aria Kim</h5><span>Administrator</span></div>
+    </div>
+    <nav class="dash-nav">
+      <button data-panel="overview" data-title="Store Overview" class="active"><i class="fa-solid fa-gauge-high"></i> Overview</button>
+      <button data-panel="products" data-title="Products"><i class="fa-solid fa-shirt"></i> Products</button>
+      <button data-panel="orders" data-title="Order Queue"><i class="fa-solid fa-box"></i> Orders</button>
+      <button data-panel="customers" data-title="Customers"><i class="fa-solid fa-users"></i> Customers</button>
+      <button data-panel="marketing" data-title="Marketing"><i class="fa-solid fa-bullhorn"></i> Marketing</button>
+      <button data-panel="shipping" data-title="Shipping Zones"><i class="fa-solid fa-truck"></i> Shipping</button>
+      <button data-panel="settings" data-title="Store Settings"><i class="fa-solid fa-gear"></i> Settings</button>
+      <a href="login.html" data-logout class="dash-nav-link"><i class="fa-solid fa-right-from-bracket"></i> Sign out</a>
+    </nav>
+  </aside>
+
+  <div class="dash-main">
+    <div class="dash-topbar">
+      <div>
+        <h1 id="dashPanelTitle">Store Overview</h1>
+        <p>A quick snapshot of how Stackly is performing today.</p>
+      </div>
+      <a href="404.html" class="btn btn-outline btn-sm"><i class="fa-solid fa-arrow-up-right-from-square"></i> View storefront</a>
+    </div>
+
+    <!-- OVERVIEW -->
+    <div class="dash-panel active" id="panel-overview">
+      <div class="dash-stats">
+        <div class="dash-stat-card"><div class="dsc-top"><div class="dsc-icon"><i class="fa-solid fa-sack-dollar"></i></div><span class="dsc-trend up"><i class="fa-solid fa-arrow-trend-up"></i> 12%</span></div><span class="dsc-num">$18.4K</span><span class="dsc-lbl">Revenue (30d)</span></div>
+        <div class="dash-stat-card"><div class="dsc-top"><div class="dsc-icon"><i class="fa-solid fa-box"></i></div><span class="dsc-trend up"><i class="fa-solid fa-arrow-trend-up"></i> 8%</span></div><span class="dsc-num">412</span><span class="dsc-lbl">Orders (30d)</span></div>
+        <div class="dash-stat-card"><div class="dsc-top"><div class="dsc-icon"><i class="fa-solid fa-users"></i></div><span class="dsc-trend up"><i class="fa-solid fa-arrow-trend-up"></i> 4%</span></div><span class="dsc-num">2,140</span><span class="dsc-lbl">Active customers</span></div>
+        <div class="dash-stat-card"><div class="dsc-top"><div class="dsc-icon"><i class="fa-solid fa-triangle-exclamation"></i></div><span class="dsc-trend down"><i class="fa-solid fa-arrow-trend-down"></i></span></div><span class="dsc-num">6</span><span class="dsc-lbl">Low stock items</span></div>
+      </div>
+
+      <div class="dash-card">
+        <div class="dash-card-head"><h3>Recent orders</h3><span style="font-size:12.5px;color:var(--ink-soft);">Latest 4</span></div>
+        <div class="dash-table-wrap">
+          <table class="dash-table">
+            <thead><tr><th>Order</th><th>Customer</th><th>Total</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td>#BW-10256</td><td>Priya N.</td><td>$88.00</td><td><span class="status-pill pending"><i class="fa-solid fa-clock"></i> Processing</span></td></tr>
+              <tr><td>#BW-10255</td><td>Daniel O.</td><td>$54.00</td><td><span class="status-pill shipped"><i class="fa-solid fa-truck"></i> Shipped</span></td></tr>
+              <tr><td>#BW-10254</td><td>Amara T.</td><td>$122.00</td><td><span class="status-pill paid"><i class="fa-solid fa-check"></i> Delivered</span></td></tr>
+              <tr><td>#BW-10253</td><td>Kate B.</td><td>$34.00</td><td><span class="status-pill cancelled"><i class="fa-solid fa-xmark"></i> Cancelled</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRODUCTS -->
+    <div class="dash-panel" id="panel-products">
+      <div class="dash-card">
+        <div class="dash-card-head">
+          <h3>Product catalogue</h3>
+          <button class="btn btn-primary btn-sm" type="button" onclick="location.href='404.html'"><i class="fa-solid fa-plus"></i> Add product</button>
+        </div>
+        <div class="dash-table-wrap">
+          <table class="dash-table">
+            <thead><tr><th>Product</th><th>Category</th><th>Price</th><th>Stock</th><th></th></tr></thead>
+            <tbody>
+              <tr><td>Cloud Sleep Gown</td><td>Sleepwear</td><td>$34.00</td><td>128</td><td class="row-actions"><button aria-label="Edit" onclick="location.href='404.html'"><i class="fa-solid fa-pen"></i></button><button aria-label="Delete" onclick="location.href='404.html'"><i class="fa-solid fa-trash"></i></button></td></tr>
+              <tr><td>Meadow Knit Romper</td><td>Rompers</td><td>$28.00</td><td>6</td><td class="row-actions"><button aria-label="Edit" onclick="location.href='404.html'"><i class="fa-solid fa-pen"></i></button><button aria-label="Delete" onclick="location.href='404.html'"><i class="fa-solid fa-trash"></i></button></td></tr>
+              <tr><td>Rainbow Stacker</td><td>Toys</td><td>$22.00</td><td>54</td><td class="row-actions"><button aria-label="Edit" onclick="location.href='404.html'"><i class="fa-solid fa-pen"></i></button><button aria-label="Delete" onclick="location.href='404.html'"><i class="fa-solid fa-trash"></i></button></td></tr>
+              <tr><td>Bramble Oak Crib</td><td>Furniture</td><td>$420.00</td><td>9</td><td class="row-actions"><button aria-label="Edit" onclick="location.href='404.html'"><i class="fa-solid fa-pen"></i></button><button aria-label="Delete" onclick="location.href='404.html'"><i class="fa-solid fa-trash"></i></button></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- ORDERS -->
+    <div class="dash-panel" id="panel-orders">
+      <div class="dash-card">
+        <div class="dash-card-head"><h3>Order queue</h3></div>
+        <div class="dash-table-wrap">
+          <table class="dash-table">
+            <thead><tr><th>Order</th><th>Customer</th><th>Items</th><th>Total</th><th>Status</th><th></th></tr></thead>
+            <tbody>
+              <tr><td>#BW-10256</td><td>Priya N.</td><td>3</td><td>$88.00</td><td><span class="status-pill pending"><i class="fa-solid fa-clock"></i> Processing</span></td><td class="row-actions"><button aria-label="View" onclick="location.href='404.html'"><i class="fa-solid fa-eye"></i></button></td></tr>
+              <tr><td>#BW-10255</td><td>Daniel O.</td><td>2</td><td>$54.00</td><td><span class="status-pill shipped"><i class="fa-solid fa-truck"></i> Shipped</span></td><td class="row-actions"><button aria-label="View" onclick="location.href='404.html'"><i class="fa-solid fa-eye"></i></button></td></tr>
+              <tr><td>#BW-10254</td><td>Amara T.</td><td>4</td><td>$122.00</td><td><span class="status-pill paid"><i class="fa-solid fa-check"></i> Delivered</span></td><td class="row-actions"><button aria-label="View" onclick="location.href='404.html'"><i class="fa-solid fa-eye"></i></button></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- CUSTOMERS -->
+    <div class="dash-panel" id="panel-customers">
+      <div class="dash-card">
+        <div class="dash-card-head"><h3>Customers</h3></div>
+        <div class="dash-table-wrap">
+          <table class="dash-table">
+            <thead><tr><th>Name</th><th>Email</th><th>Orders</th><th>Lifetime value</th></tr></thead>
+            <tbody>
+              <tr><td>Priya Nair</td><td>priya@email.com</td><td>6</td><td>$310.00</td></tr>
+              <tr><td>Daniel Osei</td><td>daniel@email.com</td><td>3</td><td>$142.00</td></tr>
+              <tr><td>Amara Thompson</td><td>amara@email.com</td><td>9</td><td>$486.00</td></tr>
+              <tr><td>Kate Bennett</td><td>kate@email.com</td><td>2</td><td>$68.00</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- MARKETING -->
+    <div class="dash-panel" id="panel-marketing">
+      <div class="dash-stats">
+        <div class="dash-stat-card"><div class="dsc-top"><div class="dsc-icon"><i class="fa-solid fa-ticket"></i></div><span class="dsc-trend up"><i class="fa-solid fa-arrow-trend-up"></i> 24%</span></div><span class="dsc-num">8</span><span class="dsc-lbl">Active coupons</span></div>
+        <div class="dash-stat-card"><div class="dsc-top"><div class="dsc-icon"><i class="fa-solid fa-envelope"></i></div><span class="dsc-trend up"><i class="fa-solid fa-arrow-trend-up"></i> 12%</span></div><span class="dsc-num">3,420</span><span class="dsc-lbl">Emails sent (30d)</span></div>
+        <div class="dash-stat-card"><div class="dsc-top"><div class="dsc-icon"><i class="fa-solid fa-mouse-pointer"></i></div></div><span class="dsc-num">4.2%</span><span class="dsc-lbl">Click rate</span></div>
+        <div class="dash-stat-card"><div class="dsc-top"><div class="dsc-icon"><i class="fa-solid fa-coins"></i></div></div><span class="dsc-num">$2,140</span><span class="dsc-lbl">Revenue from promos</span></div>
+      </div>
+      <div class="dash-card">
+        <div class="dash-card-head"><h3>Coupon codes</h3><button class="btn btn-primary btn-sm" type="button" onclick="location.href='404.html'"><i class="fa-solid fa-plus"></i> Create coupon</button></div>
+        <div class="dash-table-wrap">
+          <table class="dash-table">
+            <thead><tr><th>Code</th><th>Type</th><th>Value</th><th>Uses</th><th>Expires</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td><strong>SUMMER15</strong></td><td>Percentage</td><td>15% off</td><td>312 / 500</td><td>Sep 30, 2026</td><td><span class="status-pill paid"><i class="fa-solid fa-check"></i> Active</span></td></tr>
+              <tr><td><strong>WELCOME10</strong></td><td>Percentage</td><td>10% off</td><td>1,204 / —</td><td>No expiry</td><td><span class="status-pill paid"><i class="fa-solid fa-check"></i> Active</span></td></tr>
+              <tr><td><strong>FREESHIP</strong></td><td>Free shipping</td><td>$0 delivery</td><td>856 / 1,000</td><td>Dec 31, 2026</td><td><span class="status-pill paid"><i class="fa-solid fa-check"></i> Active</span></td></tr>
+              <tr><td><strong>FLASH50</strong></td><td>Fixed amount</td><td>$50 off</td><td>48 / 50</td><td>Aug 20, 2026</td><td><span class="status-pill pending"><i class="fa-solid fa-clock"></i> Expiring</span></td></tr>
+              <tr><td><strong>EXPIRED20</strong></td><td>Percentage</td><td>20% off</td><td>500 / 500</td><td>Jul 01, 2026</td><td><span class="status-pill cancelled"><i class="fa-solid fa-xmark"></i> Expired</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="dash-card">
+        <div class="dash-card-head"><h3>Email campaigns</h3><button class="btn btn-primary btn-sm" type="button" onclick="location.href='404.html'"><i class="fa-solid fa-plus"></i> New campaign</button></div>
+        <div class="dash-table-wrap">
+          <table class="dash-table">
+            <thead><tr><th>Campaign</th><th>Subject</th><th>Sent</th><th>Opened</th><th>Clicked</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td>Back to School</td><td>Gear up for nursery — 15% off</td><td>2,840</td><td>42%</td><td>8.1%</td><td><span class="status-pill shipped"><i class="fa-solid fa-check"></i> Sent</span></td></tr>
+              <tr><td>New Arrivals Aug</td><td>Just in: Fall collection is here</td><td>3,102</td><td>38%</td><td>6.4%</td><td><span class="status-pill shipped"><i class="fa-solid fa-check"></i> Sent</span></td></tr>
+              <tr><td>Win-back Flow</td><td>We miss you — here's 20% off</td><td>—</td><td>—</td><td>—</td><td><span class="status-pill pending"><i class="fa-solid fa-clock"></i> Draft</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- SHIPPING -->
+    <div class="dash-panel" id="panel-shipping">
+      <div class="dash-card">
+        <div class="dash-card-head"><h3>Shipping zones</h3><button class="btn btn-primary btn-sm" type="button" onclick="location.href='404.html'"><i class="fa-solid fa-plus"></i> Add zone</button></div>
+        <div class="dash-table-wrap">
+          <table class="dash-table">
+            <thead><tr><th>Zone</th><th>Regions</th><th>Method</th><th>Rate</th><th>Est. Delivery</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Domestic — Standard</strong></td><td>United States</td><td>USPS Priority</td><td>$5.99 (free over $60)</td><td>3–5 business days</td><td><span class="status-pill paid"><i class="fa-solid fa-check"></i> Active</span></td></tr>
+              <tr><td><strong>Domestic — Express</strong></td><td>United States</td><td>FedEx 2-Day</td><td>$14.99</td><td>2 business days</td><td><span class="status-pill paid"><i class="fa-solid fa-check"></i> Active</span></td></tr>
+              <tr><td><strong>Canada</strong></td><td>Canada</td><td>UPS Standard</td><td>$12.99</td><td>5–8 business days</td><td><span class="status-pill paid"><i class="fa-solid fa-check"></i> Active</span></td></tr>
+              <tr><td><strong>International</strong></td><td>UK, EU, Australia</td><td>DHL Express</td><td>$24.99</td><td>7–14 business days</td><td><span class="status-pill paid"><i class="fa-solid fa-check"></i> Active</span></td></tr>
+              <tr><td><strong>Local Pickup</strong></td><td>Salem, Tamil Nadu</td><td>In-store pickup</td><td>Free</td><td>Ready in 2 hours</td><td><span class="status-pill pending"><i class="fa-solid fa-clock"></i> Limited</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="dash-card">
+        <div class="dash-card-head"><h3>Fulfilled shipments</h3><span style="font-size:12.5px;color:var(--ink-soft);">Last 7 days</span></div>
+        <div class="dash-stats" style="margin-bottom:0;">
+          <div class="dash-stat-card"><div class="dsc-top"><div class="dsc-icon"><i class="fa-solid fa-box"></i></div></div><span class="dsc-num">86</span><span class="dsc-lbl">Shipped</span></div>
+          <div class="dash-stat-card"><div class="dsc-top"><div class="dsc-icon"><i class="fa-solid fa-truck"></i></div></div><span class="dsc-num">42</span><span class="dsc-lbl">In transit</span></div>
+          <div class="dash-stat-card"><div class="dsc-top"><div class="dsc-icon"><i class="fa-solid fa-circle-check"></i></div></div><span class="dsc-num">71</span><span class="dsc-lbl">Delivered</span></div>
+          <div class="dash-stat-card"><div class="dsc-top"><div class="dsc-icon"><i class="fa-solid fa-triangle-exclamation"></i></div></div><span class="dsc-num">3</span><span class="dsc-lbl">Exceptions</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SETTINGS -->
+    <div class="dash-panel" id="panel-settings">
+      <div class="dash-card">
+        <div class="dash-card-head"><h3>Store settings</h3></div>
+        <form id="adminSettingsForm">
+          <div class="settings-grid">
+            <div class="field"><label for="storeName">Store name</label><input id="storeName" type="text" value="Stackly Baby & Kids Co."></div>
+            <div class="field"><label for="storeEmail">Support email</label><input id="storeEmail" type="email" value="info@thestackly.com"></div>
+            <div class="field"><label for="storePhone">Support phone</label><input id="storePhone" type="tel" value="+91 70107 92745"></div>
+            <div class="field"><label for="storeCurrency">Currency</label><select id="storeCurrency"><option selected>USD ($)</option><option>EUR (€)</option><option>GBP (£)</option><option>INR (₹)</option></select></div>
+            <div class="field"><label for="storeTimezone">Timezone</label><select id="storeTimezone"><option selected>America/Los_Angeles (PT)</option><option>America/New_York (ET)</option><option>Europe/London (GMT)</option><option>Asia/Kolkata (IST)</option></select></div>
+            <div class="field"><label for="storeTax">Tax rate (%)</label><input id="storeTax" type="number" value="8.5" step="0.1" min="0" max="30"></div>
+          </div>
+          <div class="settings-grid" style="margin-top:20px;">
+            <div class="field"><label for="storeAddress">Store address</label><textarea id="storeAddress" rows="3" style="width:100%;padding:12px;border:2px solid var(--line);border-radius:var(--radius-md);font-size:14px;font-family:var(--font-body);resize:vertical;">MMR Complex, Periyakollappatty, Chinna Thirupathi, Salem, Tamil Nadu 636008</textarea></div>
+          </div>
+          <button type="submit" class="btn btn-primary mt-2" onclick="location.href='404.html'"><i class="fa-solid fa-floppy-disk"></i> Save settings</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<script src="js/main.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>

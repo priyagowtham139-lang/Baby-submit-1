@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Our Story — Stackly Baby & Kids</title>
+<meta name="description" content="Meet the team behind Stackly and learn how our organic baby and kids essentials are made.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+<header class="site-header">
+    <div class="header-inner">
+      <div class="header-side left">
+        <nav class="main-nav" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="nursery.html">Nursery</a>
+          <a href="about.html">Our Story</a>
+          <a href="blog.html">Journal</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+
+      <a href="index.html" class="brand">
+        <img src="Assets/logo_black (4).webp" alt="Stackly" class="brand-logo">
+      </a>
+
+      <div class="header-side right">
+        <button class="icon-btn hide-mobile" id="wishBtn" aria-label="Wishlist" onclick="location.href='wishlist.html'">
+          <i class="fa-solid fa-heart"></i><span class="badge" id="wishBadge">0</span>
+        </button>
+        <button class="icon-btn hide-mobile" id="cartBtn" aria-label="Cart" onclick="location.href='cart.html'">
+          <i class="fa-solid fa-bag-shopping"></i><span class="badge" id="cartBadge">0</span>
+        </button>
+        <a href="login.html" class="btn-signin hide-mobile"><i class="fa-solid fa-user"></i><span>Sign In</span></a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav" id="mobileNav">
+    <div class="scrim"></div>
+    <div class="panel">
+      <div class="mobile-nav-top">
+        <a href="index.html" class="brand">
+          <span class="brand-mark"><i class="fa-solid fa-leaf fa-fw"></i></span>
+          <span class="brand-name">Stackly</span>
+        </a>
+        <button class="mobile-close" id="mobileNavClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <ul>
+        <li><a href="index.html"><span>Home</span><i class="fa-solid fa-circle-right"></i></a></li>
+        <li><a href="shop.html"><span>Shop</span><i class="fa-solid fa-circle-right"></i></a></li>
+        <li><a href="nursery.html"><span>Nursery</span><i class="fa-solid fa-circle-right"></i></a></li>
+        <li><a href="about.html"><span>Our Story</span><i class="fa-solid fa-circle-right"></i></a></li>
+        <li><a href="blog.html"><span>Journal</span><i class="fa-solid fa-circle-right"></i></a></li>
+        <li><a href="contact.html"><span>Contact</span><i class="fa-solid fa-circle-right"></i></a></li>
+      </ul>
+      <div class="mobile-nav-actions">
+        <a href="wishlist.html" class="btn btn-outline btn-block"><i class="fa-solid fa-heart"></i> Wishlist <span class="badge" id="wishBadgeMob">0</span></a>
+        <a href="cart.html" class="btn btn-outline btn-block"><i class="fa-solid fa-bag-shopping"></i> My Bag <span class="badge" id="cartBadgeMob">0</span></a>
+        <a href="login.html" class="btn btn-primary btn-block"><i class="fa-solid fa-user"></i> Sign In</a>
+      </div>
+      <div class="mobile-nav-foot">
+        <a href="404.html" data-social-404 aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="404.html" data-social-404 aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="404.html" data-social-404 aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+        <a href="404.html" data-social-404 aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+      </div>
+    </div>
+  </div>
+
+<main>
+<!-- 1. PAGE BANNER -->
+<section class="hero">
+  <div class="hero-slides">
+    <div class="hero-slide active" style="background-image:url('Assets/journal.webp')"></div>
+    <div class="hero-slide" style="background-image:url('Assets/journal1.webp')"></div>
+    <div class="hero-slide" style="background-image:url('Assets/journal2.webp')"></div>
+  </div>
+</section>
+
+<!-- 2. STORY -->
+<section class="section">
+  <div class="container">
+    <div style="display:grid; grid-template-columns:1fr 1.2fr 1fr; gap:28px; align-items:center;">
+      <img src="Assets/organic_cotton1.webp" alt="Founders reviewing organic cotton" class="reveal-scale story-img" style="border-radius:var(--radius-lg);width:100%;aspect-ratio:3/4;object-fit:cover;">
+      <div class="section-head reveal" style="margin-bottom:0; text-align:center; padding:0 16px;">
+        <span class="eyebrow"><i class="fa-solid fa-seedling"></i> How we started</span>
+        <h2>A softer supply chain, on purpose.</h2>
+        <p>We spent our first two years just on fabric — visiting organic cotton farms, testing dye houses, and rejecting anything that didn't feel right against a newborn's skin. That obsession never left.</p>
+        <p class="mt-2">Today every Stackly piece is GOTS-certified from farm to finished seam, sewn in facilities we've personally visited and audited every year since 2018.</p>
+      </div>
+      <img src="Assets/organic_cotton2.webp" alt="Organic cotton farm visit" class="reveal-scale story-img" style="border-radius:var(--radius-lg);width:100%;aspect-ratio:3/4;object-fit:cover;">
+    </div>
+  </div>
+</section>
+
+<!-- 3. TIMELINE -->
+<section class="section" style="padding-top:0;background:var(--gray); border-radius:var(--radius-lg); margin:0 16px;">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow"><i class="fa-solid fa-timeline"></i> Milestones</span>
+      <h2>Ten years, in five moments</h2>
+    </div>
+    <div class="ms-grid stagger">
+      <div class="ms-card reveal-scale">
+        <div style="font-family:var(--font-display); font-size:clamp(28px,4vw,40px); font-weight:700; color:var(--pink); line-height:1;">2016</div>
+        <h4 style="margin:12px 0 6px;">Kitchen-table beginnings</h4>
+        <p style="font-size:13px; color:var(--ink-soft); line-height:1.5;">First 40-piece collection, hand-delivered to families across Portland.</p>
+      </div>
+      <div class="ms-card reveal-scale">
+        <div style="font-family:var(--font-display); font-size:clamp(28px,4vw,40px); font-weight:700; color:var(--pink); line-height:1;">2018</div>
+        <h4 style="margin:12px 0 6px;">GOTS certification</h4>
+        <p style="font-size:13px; color:var(--ink-soft); line-height:1.5;">Our full supply chain earns organic certification, farm to finished seam.</p>
+      </div>
+      <div class="ms-card reveal-scale">
+        <div style="font-family:var(--font-display); font-size:clamp(28px,4vw,40px); font-weight:700; color:var(--pink); line-height:1;">2020</div>
+        <h4 style="margin:12px 0 6px;">Buy-back program</h4>
+        <p style="font-size:13px; color:var(--ink-soft); line-height:1.5;">Outgrown pieces earn store credit and get a second home.</p>
+      </div>
+      <div class="ms-card reveal-scale">
+        <div style="font-family:var(--font-display); font-size:clamp(28px,4vw,40px); font-weight:700; color:var(--pink); line-height:1;">2023</div>
+        <h4 style="margin:12px 0 6px;">Nursery collection</h4>
+        <p style="font-size:13px; color:var(--ink-soft); line-height:1.5;">Furniture and decor join the family, all built to the same standard.</p>
+      </div>
+      <div class="ms-card reveal-scale">
+        <div style="font-family:var(--font-display); font-size:clamp(28px,4vw,40px); font-weight:700; color:var(--pink); line-height:1;">2026</div>
+        <h4 style="margin:12px 0 6px;">40K+ families</h4>
+        <p style="font-size:13px; color:var(--ink-soft); line-height:1.5;">Shipping to 120+ countries, still packed by hand in Portland.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. VALUES — 3D TILT -->
+<section class="section">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow"><i class="fa-solid fa-compass"></i> What guides us</span>
+      <h2>Three things we won't compromise on</h2>
+    </div>
+    <div class="values-grid stagger">
+      <div class="tilt-card reveal-scale">
+        <div class="tilt-inner value-card">
+          <div class="why-icon"><i class="fa-solid fa-leaf"></i></div>
+          <h4>Materials first</h4>
+          <p>If a fabric or dye can't pass our skin-safety review, it doesn't ship — no exceptions, ever.</p>
+        </div>
+      </div>
+      <div class="tilt-card reveal-scale">
+        <div class="tilt-inner value-card">
+          <div class="why-icon"><i class="fa-solid fa-people-group"></i></div>
+          <h4>Fair, visited factories</h4>
+          <p>Every partner factory is visited in person at least once a year by our own team.</p>
+        </div>
+      </div>
+      <div class="tilt-card reveal-scale">
+        <div class="tilt-inner value-card">
+          <div class="why-icon"><i class="fa-solid fa-recycle"></i></div>
+          <h4>Designed to circulate</h4>
+          <p>Buy-back, resale and repair are part of the product, not an afterthought.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. TEAM -->
+<section class="section" style="padding-top:0;">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow"><i class="fa-solid fa-user-group"></i> The people behind it</span>
+      <h2>A small team, ten years in</h2>
+    </div>
+    <div class="team-grid stagger">
+      <div class="team-card reveal-scale">
+        <img src="Assets/Bhavya.webp" alt="Portrait of Stackly co-founder">
+        <div class="tc-info"><h4>Mireille Okoye</h4><span>Co-founder &amp; Creative Director</span></div>
+      </div>
+      <div class="team-card reveal-scale">
+        <img src="Assets/sam.webp" alt="Portrait of Stackly co-founder">
+        <div class="tc-info"><h4>Sam Whitfield</h4><span>Co-founder &amp; Supply Chain</span></div>
+      </div>
+      <div class="team-card reveal-scale">
+        <img src="Assets/juli.webp" alt="Portrait of Stackly design lead">
+        <div class="tc-info"><h4>Julia Park</h4><span>Head of Product Design</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. CTA -->
+<section class="section" style="padding-top:0;">
+  <div class="container">
+    <div class="section-head center" style="max-width:600px; margin:0 auto;">
+      <span class="eyebrow"><i class="fa-solid fa-circle-play"></i> Our mission</span>
+      <h2>Two minutes with our founders</h2>
+      <p>Why we still visit every factory ourselves, and what "handed down twice" really means to us.</p>
+      <a href="shop.html" class="btn btn-primary mt-3"><i class="fa-solid fa-bag-shopping"></i> Shop the collection</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand" style="align-items:flex-start;text-align:left">
+            <img src="Assets/logo_white (4).webp" alt="Stackly" class="footer-logo">
+          </a>
+          <p>A small, considered baby &amp; kids studio — organic fabrics, playful shapes and pieces made to be handed down. Founded 2016, still stitched with the same care.</p>
+          <div class="footer-addr">
+            <div><i class="fa-solid fa-location-dot"></i><span>MMR Complex, Periyakollappatty, Chinna Thirupathi, Salem, Tamil Nadu 636008</span></div>
+            <div><i class="fa-solid fa-phone"></i><span>+91 70107 92745</span></div>
+            <div><i class="fa-solid fa-envelope"></i><span>info@thestackly.com</span></div>
+          </div>
+          <div class="footer-social">
+            <a href="404.html" data-social-404 aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="404.html" data-social-404 aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="404.html" data-social-404 aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+            <a href="404.html" data-social-404 aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>Quick Links <i class="fa-solid fa-circle-down show-mobile"></i></h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="nursery.html">Nursery</a></li>
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="blog.html">Journal</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Company <i class="fa-solid fa-circle-down show-mobile"></i></h5>
+          <ul>
+            <li><a href="404.html">Our Story</a></li>
+            <li><a href="404.html">Journal</a></li>
+            <li><a href="404.html">Contact</a></li>
+            <li><a href="404.html">Sign In</a></li>
+            <li><a href="404.html">Admin Portal</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Stay in the Loop <i class="fa-solid fa-circle-down show-mobile"></i></h5>
+          <ul>
+            <li style="color:rgba(251,246,239,.78);font-size:14.5px;">Nursery ideas, restock alerts and 10% off your first order.</li>
+          </ul>
+          <form class="newsletter-mini" data-newsletter>
+            <input type="email" required placeholder="Your email address" aria-label="Email address">
+            <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+          </form>
+          <p data-newsletter-error style="display:none; color:#e74c3c; font-size:12px; margin-top:6px;">Only Gmail addresses are allowed.</p>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>&copy; 2026 Stackly Baby &amp; Kids Co. All rights reserved.</span>
+      <div class="pay-icons">
+        <i class="fa-brands fa-cc-visa"></i>
+        <i class="fa-brands fa-cc-mastercard"></i>
+        <i class="fa-brands fa-cc-paypal"></i>
+        <i class="fa-brands fa-cc-apple-pay"></i>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" aria-label="Back to top"><i class="fa-solid fa-circle-up"></i></button>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
