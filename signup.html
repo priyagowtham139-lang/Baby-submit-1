@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Create Account — Stackly</title>
+<meta name="description" content="Create a new Stackly account to shop organic baby & kids essentials.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/login.css">
+</head>
+<body class="auth-body">
+
+<header class="auth-topbar">
+  <a href="index.html" class="brand">
+    <img src="Assets/logo_black (4).webp" alt="Stackly" class="brand-logo">
+  </a>
+  <a href="index.html" class="auth-topbar-link"><i class="fa-solid fa-circle-left"></i> Go back home</a>
+</header>
+
+<main class="auth-page">
+  <!-- LEFT — decorative panel -->
+  <div class="auth-visual">
+    <div class="av-blob av-blob-1"></div>
+    <div class="av-blob av-blob-2"></div>
+    <div class="av-content">
+      <div class="av-icon"><i class="fa-solid fa-leaf"></i></div>
+      <h2>Stackly</h2>
+      <p>Premium organic baby &amp; kids essentials — made with love, built to last.</p>
+      <div class="av-features">
+        <div class="av-feat"><i class="fa-solid fa-truck-fast"></i><span>Free shipping over $60</span></div>
+        <div class="av-feat"><i class="fa-solid fa-rotate-left"></i><span>60-day easy returns</span></div>
+        <div class="av-feat"><i class="fa-solid fa-leaf"></i><span>100% organic cotton</span></div>
+      </div>
+    </div>
+    <div class="av-footer">&copy; 2026 Stackly Baby &amp; Kids Co.</div>
+  </div>
+
+  <!-- RIGHT — form panel -->
+  <div class="auth-form-panel">
+    <div class="afp-inner">
+
+      <!-- Sign Up form -->
+      <div class="auth-form active" id="signupForm">
+        <div class="afp-header">
+          <h1>Create account</h1>
+          <p>Join Stackly and discover organic baby essentials</p>
+        </div>
+
+        <form id="formSignup" novalidate>
+          <div class="field-row">
+            <div class="field">
+              <label for="suFirst">First name</label>
+              <div class="input-wrap"><i class="fa-solid fa-user"></i><input id="suFirst" type="text" required placeholder="Jamie"></div>
+              <span class="field-error" id="suFirstErr"></span>
+            </div>
+            <div class="field">
+              <label for="suLast">Last name</label>
+              <div class="input-wrap"><i class="fa-solid fa-user"></i><input id="suLast" type="text" required placeholder="Rivera"></div>
+              <span class="field-error" id="suLastErr"></span>
+            </div>
+          </div>
+          <div class="field">
+            <label for="suEmail">Email</label>
+            <div class="input-wrap"><i class="fa-solid fa-envelope"></i><input id="suEmail" type="email" required placeholder="you@example.com" autocomplete="username"></div>
+            <span class="field-error" id="suEmailErr"></span>
+          </div>
+          <div class="field">
+            <label for="suPassword">Password</label>
+            <div class="input-wrap"><i class="fa-solid fa-lock"></i><input id="suPassword" type="password" required placeholder="Create a password" autocomplete="new-password" minlength="6"><button type="button" class="pw-toggle" data-target="suPassword" aria-label="Show password"><i class="fa-solid fa-eye"></i></button></div>
+            <span class="field-error" id="suPassErr"></span>
+          </div>
+          <div class="field">
+            <label for="suConfirm">Confirm password</label>
+            <div class="input-wrap"><i class="fa-solid fa-lock"></i><input id="suConfirm" type="password" required placeholder="Re-enter your password" autocomplete="new-password" minlength="6"><button type="button" class="pw-toggle" data-target="suConfirm" aria-label="Show password"><i class="fa-solid fa-eye"></i></button></div>
+            <span class="field-error" id="suConfirmErr"></span>
+          </div>
+          <div class="afp-row">
+            <div>
+              <label class="check-label"><input type="checkbox" id="suTerms" required> I agree to the <a href="#" class="afp-link">Terms</a> &amp; <a href="#" class="afp-link">Privacy Policy</a></label>
+              <span class="field-error" id="suTermsErr"></span>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block afp-submit">Create account <i class="fa-solid fa-circle-right"></i></button>
+        </form>
+
+        <p class="afp-switch">Already have an account? <a href="login.html" class="link-btn">Sign in</a></p>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<script src="js/main.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>

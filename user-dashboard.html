@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Parent Dashboard — Stackly</title>
+<meta name="description" content="Track orders, manage your wishlist and update account settings in your Stackly parent dashboard.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/login.css">
+</head>
+<body class="dash-body">
+
+<!-- MOBILE HEADER -->
+<header class="dash-mob-header">
+  <a href="index.html" class="brand">
+    <img src="Assets/logo_black (4).webp" alt="Stackly" class="brand-logo">
+  </a>
+  <button class="hamburger" id="dashHamburger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- MOBILE DRAWER -->
+<div class="dash-mob-drawer" id="dashDrawer">
+  <div class="dash-mob-scrim" id="dashScrim"></div>
+  <div class="dash-mob-panel">
+    <div class="dash-mob-top">
+      <a href="index.html" class="dash-logo">
+        <img src="Assets/logo_black (4).webp" alt="Stackly">
+      </a>
+    </div>
+    <div class="dash-profile">
+      <div class="dash-avatar">JR</div>
+      <div><h5>Jamie Rivera</h5><span>Parent Account</span></div>
+    </div>
+    <nav class="dash-nav">
+      <button data-panel="overview" data-title="Overview" class="active"><i class="fa-solid fa-gauge-high"></i> Overview</button>
+      <button data-panel="orders" data-title="My Orders"><i class="fa-solid fa-box"></i> My Orders</button>
+      <button data-panel="wishlist" data-title="Wishlist"><i class="fa-solid fa-heart"></i> Wishlist</button>
+      <button data-panel="settings" data-title="Account Settings"><i class="fa-solid fa-gear"></i> Settings</button>
+      <button data-panel="addresses" data-title="My Addresses"><i class="fa-solid fa-location-dot"></i> Addresses</button>
+      <button data-panel="returns" data-title="Return Requests"><i class="fa-solid fa-rotate-left"></i> Returns</button>
+      <button data-panel="subscriptions" data-title="Subscriptions"><i class="fa-solid fa-repeat"></i> Subscriptions</button>
+      <a href="login.html" data-logout class="dash-nav-link"><i class="fa-solid fa-right-from-bracket"></i> Sign out</a>
+    </nav>
+  </div>
+</div>
+
+<main>
+  <aside class="dash-sidebar">
+    <a href="index.html" class="dash-logo">
+      <img src="Assets/logo_black (4).webp" alt="Stackly">
+    </a>
+    <div class="dash-profile">
+      <div class="dash-avatar">JR</div>
+      <div><h5>Jamie Rivera</h5><span>Parent Account</span></div>
+    </div>
+    <nav class="dash-nav">
+      <button data-panel="overview" data-title="Overview" class="active"><i class="fa-solid fa-gauge-high"></i> Overview</button>
+      <button data-panel="orders" data-title="My Orders"><i class="fa-solid fa-box"></i> My Orders</button>
+      <button data-panel="wishlist" data-title="Wishlist"><i class="fa-solid fa-heart"></i> Wishlist</button>
+      <button data-panel="settings" data-title="Account Settings"><i class="fa-solid fa-gear"></i> Settings</button>
+      <button data-panel="addresses" data-title="My Addresses"><i class="fa-solid fa-location-dot"></i> Addresses</button>
+      <button data-panel="returns" data-title="Return Requests"><i class="fa-solid fa-rotate-left"></i> Returns</button>
+      <button data-panel="subscriptions" data-title="Subscriptions"><i class="fa-solid fa-repeat"></i> Subscriptions</button>
+      <a href="login.html" data-logout class="dash-nav-link"><i class="fa-solid fa-right-from-bracket"></i> Sign out</a>
+    </nav>
+  </aside>
+
+  <div class="dash-main">
+    <div class="dash-topbar">
+      <div>
+        <h1 id="dashPanelTitle">Overview</h1>
+        <p>Welcome back, Jamie — here's what's happening with your account.</p>
+      </div>
+      <a href="404.html" class="btn btn-primary btn-sm"><i class="fa-solid fa-bag-shopping"></i> Continue shopping</a>
+    </div>
+
+    <!-- OVERVIEW -->
+    <div class="dash-panel active" id="panel-overview">
+      <div class="dash-stats">
+        <div class="dash-stat-card"><div class="dsc-top"><div class="dsc-icon"><i class="fa-solid fa-box"></i></div><span class="dsc-trend up"><i class="fa-solid fa-arrow-trend-up"></i></span></div><span class="dsc-num">12</span><span class="dsc-lbl">Total orders</span></div>
+        <div class="dash-stat-card"><div class="dsc-top"><div class="dsc-icon"><i class="fa-solid fa-heart"></i></div></div><span class="dsc-num">7</span><span class="dsc-lbl">Wishlist items</span></div>
+        <div class="dash-stat-card"><div class="dsc-top"><div class="dsc-icon"><i class="fa-solid fa-coins"></i></div></div><span class="dsc-num">$46</span><span class="dsc-lbl">Store credit</span></div>
+        <div class="dash-stat-card"><div class="dsc-top"><div class="dsc-icon"><i class="fa-solid fa-truck-fast"></i></div></div><span class="dsc-num">1</span><span class="dsc-lbl">In transit</span></div>
+      </div>
+
+      <div class="dash-card">
+        <div class="dash-card-head"><h3>Recent activity</h3></div>
+        <div class="activity-list">
+          <div class="activity-item"><div class="activity-icon"><i class="fa-solid fa-box"></i></div><div><h5>Order #BW-10234 shipped</h5><span>2 days ago · Meadow Knit Romper, Cloud Sleep Gown</span></div></div>
+          <div class="activity-item"><div class="activity-icon"><i class="fa-solid fa-heart"></i></div><div><h5>Added Rainbow Stacker to wishlist</h5><span>5 days ago</span></div></div>
+          <div class="activity-item"><div class="activity-icon"><i class="fa-solid fa-rotate-left"></i></div><div><h5>Buy-back credit received — $18</h5><span>1 week ago · 2 outgrown rompers</span></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ORDERS -->
+    <div class="dash-panel" id="panel-orders">
+      <div class="dash-card">
+        <div class="dash-card-head"><h3>My orders</h3><span style="font-size:12.5px;color:var(--ink-soft);">3 of 12 shown</span></div>
+        <div class="dash-table-wrap">
+          <table class="dash-table">
+            <thead><tr><th>Order</th><th>Date</th><th>Items</th><th>Total</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td>#BW-10234</td><td>Aug 10, 2026</td><td>2 items</td><td>$62.00</td><td><span class="status-pill shipped"><i class="fa-solid fa-truck"></i> Shipped</span></td></tr>
+              <tr><td>#BW-10198</td><td>Jul 28, 2026</td><td>1 item</td><td>$34.00</td><td><span class="status-pill paid"><i class="fa-solid fa-check"></i> Delivered</span></td></tr>
+              <tr><td>#BW-10142</td><td>Jul 02, 2026</td><td>3 items</td><td>$96.00</td><td><span class="status-pill pending"><i class="fa-solid fa-clock"></i> Processing</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- WISHLIST -->
+    <div class="dash-panel" id="panel-wishlist">
+      <div class="dash-card">
+        <div class="dash-card-head"><h3>Saved for later</h3></div>
+        <div class="dash-product-grid">
+          <article class="product-card"><div class="product-media"><img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?q=80&w=500&auto=format&fit=crop" alt="Rainbow stacker toy"></div><div class="product-info"><span class="p-cat">Toys</span><h4>Rainbow Stacker</h4><div class="product-price"><span class="now">$22</span></div></div></article>
+          <article class="product-card"><div class="product-media"><img src="https://images.unsplash.com/photo-1519457851430-1e2ba3f70ff9?q=80&w=500&auto=format&fit=crop" alt="Knit romper set">
+</div><div class="product-info"><span class="p-cat">Rompers</span><h4>Meadow Knit Romper</h4><div class="product-price"><span class="now">$28</span></div></div></article>
+          <article class="product-card"><div class="product-media"><img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=500&auto=format&fit=crop" alt="Cloud night light"></div><div class="product-info"><span class="p-cat">Nursery</span><h4>Cloud Night Light</h4><div class="product-price"><span class="now">$38</span></div></div></article>
+        </div>
+      </div>
+    </div>
+
+    <!-- SETTINGS -->
+    <div class="dash-panel" id="panel-settings">
+      <div class="dash-card">
+        <div class="dash-card-head"><h3>Profile details</h3></div>
+        <form id="settingsForm">
+          <div class="settings-grid">
+            <div class="field"><label for="dName">Full name</label><input id="dName" type="text" value="Jamie Rivera"></div>
+            <div class="field"><label for="dEmail">Email</label><input id="dEmail" type="email" value="jamie@email.com"></div>
+            <div class="field"><label for="dPhone">Phone</label><input id="dPhone" type="tel" value="+91 70107 92745"></div>
+            <div class="field">
+              <label for="dPass">New password</label>
+              <div class="pw-wrap">
+                <input id="dPass" type="password" placeholder="Leave blank to keep current">
+                <button type="button" class="pw-toggle" data-target="dPass" aria-label="Show password" aria-pressed="false"><i class="fa-solid fa-eye"></i></button>
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary mt-2" onclick="location.href='404.html'"><i class="fa-solid fa-floppy-disk"></i> Save changes</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- ADDRESSES -->
+    <div class="dash-panel" id="panel-addresses">
+      <div class="dash-card">
+        <div class="dash-card-head"><h3>Saved addresses</h3><button class="btn btn-primary btn-sm" type="button" onclick="location.href='404.html'"><i class="fa-solid fa-plus"></i> Add address</button></div>
+        <div class="address-grid">
+          <div class="address-card default">
+            <div class="address-badge">Default</div>
+            <h5>Home</h5>
+            <p>Jamie Rivera<br>42 Maple Lane, Apt 7B<br>Portland, OR 97201<br>United States</p>
+            <p class="address-phone"><i class="fa-solid fa-phone"></i> +91 70107 92745</p>
+            <div class="address-actions">
+              <button type="button" class="btn btn-outline btn-sm" onclick="location.href='404.html'"><i class="fa-solid fa-pen"></i> Edit</button>
+              <button type="button" class="btn btn-sm" style="color:var(--pink);" onclick="location.href='404.html'"><i class="fa-solid fa-trash"></i> Remove</button>
+            </div>
+          </div>
+          <div class="address-card">
+            <h5>Office</h5>
+            <p>Jamie Rivera<br>Stackly Cowork, Floor 3<br>120 Technology Blvd<br>San Francisco, CA 94105<br>United States</p>
+            <p class="address-phone"><i class="fa-solid fa-phone"></i> +91 70107 92745</p>
+            <div class="address-actions">
+              <button type="button" class="btn btn-outline btn-sm" onclick="location.href='404.html'"><i class="fa-solid fa-pen"></i> Edit</button>
+              <button type="button" class="btn btn-sm" style="color:var(--pink);" onclick="location.href='404.html'"><i class="fa-solid fa-trash"></i> Remove</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RETURNS -->
+    <div class="dash-panel" id="panel-returns">
+      <div class="dash-card">
+        <div class="dash-card-head"><h3>Return requests</h3><button class="btn btn-primary btn-sm" type="button" onclick="location.href='404.html'"><i class="fa-solid fa-plus"></i> New return</button></div>
+        <div class="dash-table-wrap">
+          <table class="dash-table">
+            <thead><tr><th>Return ID</th><th>Order</th><th>Item</th><th>Reason</th><th>Date</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td>#RT-00891</td><td>#BW-10198</td><td>Meadow Knit Romper</td><td>Wrong size</td><td>Aug 5, 2026</td><td><span class="status-pill shipped"><i class="fa-solid fa-truck"></i> In Transit</span></td></tr>
+              <tr><td>#RT-00874</td><td>#BW-10142</td><td>Cloud Sleep Gown</td><td>Damaged on arrival</td><td>Jul 10, 2026</td><td><span class="status-pill paid"><i class="fa-solid fa-check"></i> Refunded</span></td></tr>
+              <tr><td>#RT-00856</td><td>#BW-10101</td><td>Rainbow Stacker</td><td>Changed mind</td><td>Jun 22, 2026</td><td><span class="status-pill cancelled"><i class="fa-solid fa-xmark"></i> Denied</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- SUBSCRIPTIONS -->
+    <div class="dash-panel" id="panel-subscriptions">
+      <div class="dash-card">
+        <div class="dash-card-head"><h3>Active subscriptions</h3></div>
+        <div class="sub-grid">
+          <div class="sub-card">
+            <div class="sub-icon"><i class="fa-solid fa-box"></i></div>
+            <div class="sub-info">
+              <h5>Monthly Diaper Box</h5>
+              <p>Size 3 — 120 diapers/month</p>
+              <span class="sub-status active"><i class="fa-solid fa-circle"></i> Active</span>
+            </div>
+            <div class="sub-meta">
+              <span class="sub-price">$34.00/mo</span>
+              <span class="sub-next">Next: Sep 1, 2026</span>
+            </div>
+            <div class="sub-actions">
+              <button type="button" class="btn btn-outline btn-sm" onclick="location.href='404.html'"><i class="fa-solid fa-pen"></i> Modify</button>
+              <button type="button" class="btn btn-sm" style="color:var(--pink);" onclick="location.href='404.html'"><i class="fa-solid fa-stop"></i> Pause</button>
+            </div>
+          </div>
+          <div class="sub-card">
+            <div class="sub-icon"><i class="fa-solid fa-leaf"></i></div>
+            <div class="sub-info">
+              <h5>Organic Wipes Refill</h5>
+              <p>Unscented — 600 wipes/box</p>
+              <span class="sub-status active"><i class="fa-solid fa-circle"></i> Active</span>
+            </div>
+            <div class="sub-meta">
+              <span class="sub-price">$22.00/mo</span>
+              <span class="sub-next">Next: Sep 14, 2026</span>
+            </div>
+            <div class="sub-actions">
+              <button type="button" class="btn btn-outline btn-sm" onclick="location.href='404.html'"><i class="fa-solid fa-pen"></i> Modify</button>
+              <button type="button" class="btn btn-sm" style="color:var(--pink);" onclick="location.href='404.html'"><i class="fa-solid fa-stop"></i> Pause</button>
+            </div>
+          </div>
+          <div class="sub-card">
+            <div class="sub-icon"><i class="fa-solid fa-shower"></i></div>
+            <div class="sub-info">
+              <h5>Baby Bath Bundle</h5>
+              <p>Shampoo + body wash + lotion</p>
+              <span class="sub-status paused"><i class="fa-solid fa-circle"></i> Paused</span>
+            </div>
+            <div class="sub-meta">
+              <span class="sub-price">$18.00/mo</span>
+              <span class="sub-next">Paused since Jul 2026</span>
+            </div>
+            <div class="sub-actions">
+              <button type="button" class="btn btn-primary btn-sm" onclick="location.href='404.html'"><i class="fa-solid fa-play"></i> Resume</button>
+              <button type="button" class="btn btn-sm" style="color:var(--pink);" onclick="location.href='404.html'"><i class="fa-solid fa-xmark"></i> Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<script src="js/main.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>
