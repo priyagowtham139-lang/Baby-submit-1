@@ -6,25 +6,147 @@
 /* ---------------- HERO ---------------- */
 .hero{
   position:relative; overflow:hidden;
-  min-height:70vh;
+  min-height:50vh;
+  background:url('../Assets/Hero_bg.webp') center/cover no-repeat;
+  display:flex; align-items:center; justify-content:flex-start;
 }
-.hero-slides{ position:relative; width:100%; height:70vh; }
-.hero-slide{
+.hero::before{
+  content:'';
   position:absolute; inset:0;
-  background:center/cover no-repeat;
-  opacity:0;
-  transition:opacity 1.2s ease-in-out;
+  background:radial-gradient(ellipse at 30% 50%, rgba(226,26,90,.4) 0%, transparent 55%);
+  animation:heroGlow 4s ease-in-out infinite alternate;
+  pointer-events:none;
 }
-.hero-slide.active{ opacity:1; }
+.hero::after{
+  content:'';
+  position:absolute; inset:0;
+  background:radial-gradient(circle at 80% 30%, rgba(255,215,0,.25) 0%, transparent 50%);
+  animation:heroGlow 5s ease-in-out 1s infinite alternate;
+  pointer-events:none;
+}
+.hero-content{
+  position:relative; z-index:1;
+  text-align:left; padding:60px 24px; max-width:640px;
+  margin:0; align-self:flex-start;
+}
+@keyframes heroGlow{
+  0%{ opacity:.5; }
+  100%{ opacity:1; }
+}
+.hero-content .eyebrow{
+  display:inline-flex; align-items:center; gap:6px;
+  background:var(--pink); color:#fff;
+  padding:6px 16px; border-radius:var(--radius-pill);
+  font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:.5px;
+  margin-bottom:20px;
+}
+.hero-content h1{
+  font-family:var(--font-display);
+  font-size:clamp(32px,5vw,52px);
+  line-height:1.15;
+  margin-bottom:16px;
+  color:var(--ink);
+}
+.hero-content p{
+  font-size:clamp(15px,1.8vw,18px);
+  color:#000;
+  line-height:1.6;
+  margin-bottom:28px;
+  max-width:48ch;
+  margin-left:0; margin-right:auto;
+}
+.hero-shop-btn{
+  display:inline-flex; align-items:center; gap:8px;
+  padding:14px 32px; border-radius:var(--radius-pill);
+  background:var(--pink); color:#fff; font-weight:700; font-size:15px;
+  box-shadow:0 8px 24px -6px rgba(196,19,75,.55);
+  transition:background .25s, transform .3s var(--ease), box-shadow .3s;
+  text-decoration:none;
+}
+.hero-shop-btn:hover{ background:var(--pink-deep); transform:translateY(-3px); box-shadow:0 14px 32px -8px rgba(196,19,75,.6); color:#fff; }
+.hero-shop-btn i{ transition:transform .3s var(--ease); }
+.hero-shop-btn:hover i{ transform:translateX(4px); }
+/* ---------------- HERO SVG DECOR (mobile only — premium full-section) ---------------- */
+.hero-svg-decor{ display:none; }
 @media (max-width:760px){
-  .hero{ min-height:56vh; }
-  .hero-slides{ height:56vh; }
-  .hero-slide{
-    background-position:center !important;
-    background-size:contain !important;
-    background-repeat:no-repeat !important;
-    background-color:var(--gray);
+  .hero{
+    min-height:60vh;
+    background-image:none;
+    background:linear-gradient(160deg,#fff5f8 0%,#fdf2e9 50%,#fff0f3 100%);
   }
+  .hero-content{ padding:40px 20px; position:relative; z-index:2; }
+  .hero-shop-btn{ padding:12px 24px; font-size:14px; }
+  .hero-svg-decor{
+    display:block; position:absolute; inset:0;
+    pointer-events:none; z-index:1; overflow:hidden;
+  }
+  .hero-svg-decor svg{
+    position:absolute; width:100%; height:100%;
+    top:0; left:0;
+  }
+  /* Layer 1 — morphing blobs */
+  .hsd-layer-blobs{ animation:hsdBreathe 8s ease-in-out infinite; }
+  .hsd-layer-blobs .blob-a{ animation:hsdBlobA 12s ease-in-out infinite; }
+  .hsd-layer-blobs .blob-b{ animation:hsdBlobB 10s ease-in-out infinite; }
+  .hsd-layer-blobs .blob-c{ animation:hsdBlobC 14s ease-in-out infinite; }
+  /* Layer 2 — wave curves */
+  .hsd-layer-waves{ animation:hsdWaveShift 6s ease-in-out infinite; }
+  /* Layer 3 — floating circles */
+  .hsd-layer-circles .fc{ animation:hsdRise 7s ease-in-out infinite; }
+  .hsd-layer-circles .fc:nth-child(1){ animation-duration:8s; animation-delay:0s; }
+  .hsd-layer-circles .fc:nth-child(2){ animation-duration:6s; animation-delay:1s; }
+  .hsd-layer-circles .fc:nth-child(3){ animation-duration:9s; animation-delay:2s; }
+  .hsd-layer-circles .fc:nth-child(4){ animation-duration:7s; animation-delay:.5s; }
+  .hsd-layer-circles .fc:nth-child(5){ animation-duration:10s; animation-delay:1.5s; }
+  .hsd-layer-circles .fc:nth-child(6){ animation-duration:6.5s; animation-delay:3s; }
+  .hsd-layer-circles .fc:nth-child(7){ animation-duration:8.5s; animation-delay:2.5s; }
+  .hsd-layer-circles .fc:nth-child(8){ animation-duration:7.5s; animation-delay:0s; }
+  /* Layer 4 — twinkling stars */
+  .hsd-layer-stars .tw{ animation:hsdTwinkle 3s ease-in-out infinite; }
+  .hsd-layer-stars .tw:nth-child(1){ animation-delay:0s; }
+  .hsd-layer-stars .tw:nth-child(2){ animation-delay:.7s; }
+  .hsd-layer-stars .tw:nth-child(3){ animation-delay:1.4s; }
+  .hsd-layer-stars .tw:nth-child(4){ animation-delay:2.1s; }
+  .hsd-layer-stars .tw:nth-child(5){ animation-delay:.3s; }
+  .hsd-layer-stars .tw:nth-child(6){ animation-delay:1.8s; }
+  /* Layer 5 — dot grid */
+  .hsd-layer-dots{ animation:hsdDotPulse 4s ease-in-out infinite; }
+}
+@keyframes hsdBreathe{
+  0%,100%{ opacity:.6; }
+  50%{ opacity:.9; }
+}
+@keyframes hsdBlobA{
+  0%,100%{ transform:translate(0,0) scale(1) rotate(0deg); }
+  33%{ transform:translate(15px,-20px) scale(1.08) rotate(5deg); }
+  66%{ transform:translate(-10px,12px) scale(.95) rotate(-3deg); }
+}
+@keyframes hsdBlobB{
+  0%,100%{ transform:translate(0,0) scale(1) rotate(0deg); }
+  33%{ transform:translate(-18px,14px) scale(1.06) rotate(-6deg); }
+  66%{ transform:translate(12px,-18px) scale(.94) rotate(4deg); }
+}
+@keyframes hsdBlobC{
+  0%,100%{ transform:translate(0,0) scale(1); }
+  50%{ transform:translate(10px,15px) scale(1.1); }
+}
+@keyframes hsdWaveShift{
+  0%,100%{ transform:translateX(0); }
+  50%{ transform:translateX(-30px); }
+}
+@keyframes hsdRise{
+  0%{ transform:translateY(20px) scale(.8); opacity:0; }
+  20%{ opacity:1; }
+  80%{ opacity:1; }
+  100%{ transform:translateY(-30px) scale(1.1); opacity:0; }
+}
+@keyframes hsdTwinkle{
+  0%,100%{ opacity:.15; transform:scale(.8) rotate(0deg); }
+  50%{ opacity:.6; transform:scale(1.2) rotate(15deg); }
+}
+@keyframes hsdDotPulse{
+  0%,100%{ opacity:.18; }
+  50%{ opacity:.35; }
 }
 
 /* ---------------- CIRCULAR PROMO TILES (Popees-style) ---------------- */
@@ -58,7 +180,8 @@
 }
 .ct-copy{ padding:14px 4px 0; }
 .ct-copy h4{ font-size:20px; color:var(--ink); }
-.ct-copy span{ display:inline-flex; align-items:center; gap:8px; margin-top:6px; font-family:var(--font-body); font-weight:700; font-size:13px; color:var(--pink); }
+.ct-copy span{ display:inline-flex; align-items:center; gap:8px; margin-top:6px; font-family:var(--font-body); font-weight:700; font-size:13px; color:#fff; background:var(--pink); padding:8px 18px; border-radius:var(--radius-pill); transition:background .25s, transform .3s var(--ease); }
+.ct-copy span:hover{ background:var(--pink-deep); transform:translateY(-2px); }
 .ct-copy span i{ transition:transform .3s var(--ease); }
 .cat-tile:hover + .ct-copy span i,
 .cat-tile-wrap:hover .ct-copy span i{ transform:translateX(4px); }

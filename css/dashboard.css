@@ -104,9 +104,133 @@ table.dash-table tr:last-child td{ border-bottom:none; }
 @media (max-width:760px){ .dash-product-grid{ grid-template-columns:1fr 1fr; } }
 @media (max-width:480px){ .dash-product-grid{ grid-template-columns:1fr; } }
 
-/* settings form */
+/* ==================== PROFILE / SETTINGS ==================== */
+
+/* profile header card */
+.settings-profile{
+  display:flex; align-items:center; gap:24px; padding:32px;
+  background:linear-gradient(135deg, var(--pink-tint) 0%, #fff 100%);
+  border:1px solid var(--line); border-radius:var(--radius-md);
+  margin-bottom:24px; position:relative; overflow:hidden;
+}
+.settings-profile::before{
+  content:''; position:absolute; top:-40px; right:-40px;
+  width:160px; height:160px; border-radius:50%;
+  background:radial-gradient(circle, rgba(226,26,90,.12), transparent 70%);
+  pointer-events:none;
+}
+.settings-profile-avatar{
+  width:80px; height:80px; border-radius:50%;
+  background:var(--pink); color:#fff;
+  display:flex; align-items:center; justify-content:center;
+  font-family:var(--font-display); font-weight:700; font-size:28px;
+  flex:none; position:relative; z-index:1;
+  box-shadow:0 8px 24px -6px rgba(196,19,75,.4);
+}
+.settings-profile-info{ position:relative; z-index:1; }
+.settings-profile-info h3{ font-size:22px; color:var(--ink); margin-bottom:4px; }
+.settings-profile-info p{ font-size:14px; color:var(--ink-soft); }
+.settings-profile-info .sp-role{
+  display:inline-flex; align-items:center; gap:5px;
+  margin-top:8px; padding:4px 12px; border-radius:var(--radius-pill);
+  background:var(--pink); color:#fff; font-size:11px; font-weight:700;
+  text-transform:uppercase; letter-spacing:.04em;
+}
+.settings-profile-actions{ margin-left:auto; position:relative; z-index:1; }
+@media (max-width:600px){
+  .settings-profile{ flex-direction:column; text-align:center; padding:28px 20px; }
+  .settings-profile-actions{ margin-left:0; }
+}
+
+/* section divider */
+.settings-section{
+  background:#fff; border:1px solid var(--line); border-radius:var(--radius-md);
+  padding:28px; margin-bottom:22px;
+}
+.settings-section-head{
+  display:flex; align-items:center; gap:10px; margin-bottom:22px;
+  padding-bottom:16px; border-bottom:1px solid var(--line);
+}
+.settings-section-head i{
+  width:36px; height:36px; border-radius:10px;
+  background:var(--yellow-tint); color:var(--pink);
+  display:flex; align-items:center; justify-content:center; font-size:15px;
+}
+.settings-section-head h3{ font-size:17px; font-family:var(--font-body); font-weight:700; color:var(--ink); }
+.settings-section-head p{ font-size:13px; color:var(--ink-soft); margin-top:2px; }
+
+/* enhanced form fields */
 .settings-grid{ display:grid; grid-template-columns:1fr 1fr; gap:20px 24px; }
+.settings-grid .field{ margin-bottom:0; }
+.settings-grid .field label{
+  display:block; font-size:12.5px; font-weight:700; color:var(--ink);
+  margin-bottom:8px; text-transform:uppercase; letter-spacing:.03em;
+}
+.settings-grid .field input,
+.settings-grid .field select,
+.settings-grid .field textarea{
+  width:100%; padding:13px 16px; border:2px solid var(--line);
+  border-radius:var(--radius-md); font-size:14.5px; font-family:var(--font-body);
+  color:var(--ink); background:var(--gray);
+  transition:border-color .3s, box-shadow .3s;
+  outline:none; box-sizing:border-box;
+}
+.settings-grid .field input:focus,
+.settings-grid .field select:focus,
+.settings-grid .field textarea:focus{
+  border-color:var(--pink); box-shadow:0 0 0 4px var(--pink-tint); background:#fff;
+}
+.settings-grid .field textarea{ resize:vertical; min-height:90px; }
+.settings-grid .field select{ cursor:pointer; appearance:auto; }
 @media (max-width:700px){ .settings-grid{ grid-template-columns:1fr; } }
+
+/* password field */
+.pw-wrap{
+  position:relative; display:flex; align-items:center;
+  border:2px solid var(--line); border-radius:var(--radius-md);
+  background:var(--gray); transition:border-color .3s, box-shadow .3s;
+}
+.pw-wrap:focus-within{ border-color:var(--pink); box-shadow:0 0 0 4px var(--pink-tint); background:#fff; }
+.pw-wrap input{
+  flex:1; border:none; background:none; padding:13px 16px;
+  font-size:14.5px; font-family:var(--font-body); color:var(--ink);
+  outline:none; width:100%;
+}
+.pw-wrap input::placeholder{ color:var(--ink-soft); }
+.pw-wrap .pw-toggle{
+  flex-shrink:0; width:40px; height:40px; border:none; background:none;
+  color:var(--ink-soft); display:flex; align-items:center; justify-content:center;
+  font-size:14px; transition:color .25s, background .25s; margin-right:4px;
+}
+.pw-wrap .pw-toggle:hover{ color:var(--pink); background:var(--pink-tint); border-radius:8px; }
+
+/* save actions bar */
+.settings-actions{
+  display:flex; align-items:center; gap:14px; margin-top:24px;
+  padding-top:20px; border-top:1px solid var(--line);
+}
+.settings-actions .btn-primary{ padding:13px 28px; }
+.settings-actions .btn-outline{
+  padding:13px 28px; border:2px solid var(--line); border-radius:var(--radius-pill);
+  background:#fff; color:var(--ink-soft); font-weight:700; font-size:14px;
+  cursor:pointer; transition:all .25s;
+}
+.settings-actions .btn-outline:hover{ border-color:var(--ink); color:var(--ink); }
+@media (max-width:480px){
+  .settings-actions{ flex-direction:column; }
+  .settings-actions .btn-primary, .settings-actions .btn-outline{ width:100%; text-align:center; justify-content:center; display:flex; }
+}
+
+/* password change section */
+.pw-section{ margin-top:20px; }
+.pw-section h4{ font-size:14px; font-weight:700; color:var(--ink); margin-bottom:16px; display:flex; align-items:center; gap:8px; }
+.pw-section h4 i{ color:var(--pink); font-size:13px; }
+.pw-change-grid{ display:grid; grid-template-columns:1fr 1fr; gap:20px 24px; }
+@media (max-width:700px){ .pw-change-grid{ grid-template-columns:1fr; } }
+
+/* settings form */
+.settings-grid-old{ display:grid; grid-template-columns:1fr 1fr; gap:20px 24px; }
+@media (max-width:700px){ .settings-grid-old{ grid-template-columns:1fr; } }
 
 /* address cards */
 .address-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:18px; }

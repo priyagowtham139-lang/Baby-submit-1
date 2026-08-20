@@ -16,6 +16,7 @@
     btn.addEventListener('click', ()=>{
       showPanel(btn.dataset.panel);
       closeDrawer();
+      window.scrollTo(0, 0);
     });
   });
 
@@ -96,6 +97,7 @@
   $$('[data-logout]').forEach(el=>{
     el.addEventListener('click', e=>{
       e.preventDefault();
+      try{ sessionStorage.removeItem('bw_dash_panel'); }catch(err){}
       window.bwToast('You have been signed out', 'fa-right-from-bracket');
       setTimeout(()=> location.href='login.html', 500);
     });
