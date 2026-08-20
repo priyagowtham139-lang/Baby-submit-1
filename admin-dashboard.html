@@ -228,21 +228,54 @@
 
     <!-- SETTINGS -->
     <div class="dash-panel" id="panel-settings">
-      <div class="dash-card">
-        <div class="dash-card-head"><h3>Store settings</h3></div>
+      <!-- Profile Header -->
+      <div class="settings-profile">
+        <div class="settings-profile-avatar" style="background:var(--pink);">AK</div>
+        <div class="settings-profile-info">
+          <h3>Aria Kim</h3>
+          <p>admin@thestackly.com</p>
+          <span class="sp-role"><i class="fa-solid fa-shield-halved"></i> Administrator</span>
+        </div>
+        <div class="settings-profile-actions">
+          <button type="button" class="btn btn-primary btn-sm" onclick="location.href='404.html'"><i class="fa-solid fa-camera"></i> Change Photo</button>
+        </div>
+      </div>
+
+      <!-- Store Information -->
+      <div class="settings-section">
+        <div class="settings-section-head">
+          <i class="fa-solid fa-store"></i>
+          <div><h3>Store Information</h3><p>Basic details about your store</p></div>
+        </div>
         <form id="adminSettingsForm">
           <div class="settings-grid">
             <div class="field"><label for="storeName">Store name</label><input id="storeName" type="text" value="Stackly Baby & Kids Co."></div>
             <div class="field"><label for="storeEmail">Support email</label><input id="storeEmail" type="email" value="info@thestackly.com"></div>
             <div class="field"><label for="storePhone">Support phone</label><input id="storePhone" type="tel" value="+91 70107 92745"></div>
+            <div class="field"><label for="storeAddress">Store address</label><textarea id="storeAddress" rows="3">MMR Complex, Periyakollappatty, Chinna Thirupathi, Salem, Tamil Nadu 636008</textarea></div>
+          </div>
+          <div class="settings-actions">
+            <button type="submit" class="btn btn-primary" onclick="location.href='404.html'"><i class="fa-solid fa-floppy-disk"></i> Save changes</button>
+            <button type="button" class="btn-outline" onclick="location.href='404.html'">Cancel</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Regional & Payment -->
+      <div class="settings-section">
+        <div class="settings-section-head">
+          <i class="fa-solid fa-globe"></i>
+          <div><h3>Regional &amp; Payment</h3><p>Configure currency, timezone and tax settings</p></div>
+        </div>
+        <form>
+          <div class="settings-grid">
             <div class="field"><label for="storeCurrency">Currency</label><select id="storeCurrency"><option selected>USD ($)</option><option>EUR (€)</option><option>GBP (£)</option><option>INR (₹)</option></select></div>
             <div class="field"><label for="storeTimezone">Timezone</label><select id="storeTimezone"><option selected>America/Los_Angeles (PT)</option><option>America/New_York (ET)</option><option>Europe/London (GMT)</option><option>Asia/Kolkata (IST)</option></select></div>
             <div class="field"><label for="storeTax">Tax rate (%)</label><input id="storeTax" type="number" value="8.5" step="0.1" min="0" max="30"></div>
           </div>
-          <div class="settings-grid" style="margin-top:20px;">
-            <div class="field"><label for="storeAddress">Store address</label><textarea id="storeAddress" rows="3" style="width:100%;padding:12px;border:2px solid var(--line);border-radius:var(--radius-md);font-size:14px;font-family:var(--font-body);resize:vertical;">MMR Complex, Periyakollappatty, Chinna Thirupathi, Salem, Tamil Nadu 636008</textarea></div>
+          <div class="settings-actions">
+            <button type="submit" class="btn btn-primary" onclick="location.href='404.html'"><i class="fa-solid fa-floppy-disk"></i> Save settings</button>
           </div>
-          <button type="submit" class="btn btn-primary mt-2" onclick="location.href='404.html'"><i class="fa-solid fa-floppy-disk"></i> Save settings</button>
         </form>
       </div>
     </div>

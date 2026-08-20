@@ -120,33 +120,84 @@
       <div class="dash-card">
         <div class="dash-card-head"><h3>Saved for later</h3></div>
         <div class="dash-product-grid">
-          <article class="product-card"><div class="product-media"><img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?q=80&w=500&auto=format&fit=crop" alt="Rainbow stacker toy"></div><div class="product-info"><span class="p-cat">Toys</span><h4>Rainbow Stacker</h4><div class="product-price"><span class="now">$22</span></div></div></article>
-          <article class="product-card"><div class="product-media"><img src="https://images.unsplash.com/photo-1519457851430-1e2ba3f70ff9?q=80&w=500&auto=format&fit=crop" alt="Knit romper set">
+          <article class="product-card"><div class="product-media"><img src="Assets/stacker.webp" alt="Rainbow stacker toy"></div><div class="product-info"><span class="p-cat">Toys</span><h4>Rainbow Stacker</h4><div class="product-price"><span class="now">$22</span></div></div></article>
+          <article class="product-card"><div class="product-media"><img src="Assets/Romber.webp" alt="Knit romper set">
 </div><div class="product-info"><span class="p-cat">Rompers</span><h4>Meadow Knit Romper</h4><div class="product-price"><span class="now">$28</span></div></div></article>
-          <article class="product-card"><div class="product-media"><img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=500&auto=format&fit=crop" alt="Cloud night light"></div><div class="product-info"><span class="p-cat">Nursery</span><h4>Cloud Night Light</h4><div class="product-price"><span class="now">$38</span></div></div></article>
+          <article class="product-card"><div class="product-media"><img src="Assets/Cloud_Night_Light.webp" alt="Cloud night light"></div><div class="product-info"><span class="p-cat">Nursery</span><h4>Cloud Night Light</h4><div class="product-price"><span class="now">$38</span></div></div></article>
         </div>
       </div>
     </div>
 
     <!-- SETTINGS -->
     <div class="dash-panel" id="panel-settings">
-      <div class="dash-card">
-        <div class="dash-card-head"><h3>Profile details</h3></div>
+      <!-- Profile Header -->
+      <div class="settings-profile">
+        <div class="settings-profile-avatar">JR</div>
+        <div class="settings-profile-info">
+          <h3>Jamie Rivera</h3>
+          <p>jamie@email.com</p>
+          <span class="sp-role"><i class="fa-solid fa-user"></i> Parent Account</span>
+        </div>
+        <div class="settings-profile-actions">
+          <button type="button" class="btn btn-primary btn-sm" onclick="location.href='404.html'"><i class="fa-solid fa-camera"></i> Change Photo</button>
+        </div>
+      </div>
+
+      <!-- Personal Information -->
+      <div class="settings-section">
+        <div class="settings-section-head">
+          <i class="fa-solid fa-user-pen"></i>
+          <div><h3>Personal Information</h3><p>Update your name, email and contact details</p></div>
+        </div>
         <form id="settingsForm">
           <div class="settings-grid">
             <div class="field"><label for="dName">Full name</label><input id="dName" type="text" value="Jamie Rivera"></div>
             <div class="field"><label for="dEmail">Email</label><input id="dEmail" type="email" value="jamie@email.com"></div>
             <div class="field"><label for="dPhone">Phone</label><input id="dPhone" type="tel" value="+91 70107 92745"></div>
-            <div class="field">
-              <label for="dPass">New password</label>
-              <div class="pw-wrap">
-                <input id="dPass" type="password" placeholder="Leave blank to keep current">
-                <button type="button" class="pw-toggle" data-target="dPass" aria-label="Show password" aria-pressed="false"><i class="fa-solid fa-eye"></i></button>
-              </div>
+          </div>
+          <div class="settings-actions">
+            <button type="submit" class="btn btn-primary" onclick="location.href='404.html'"><i class="fa-solid fa-floppy-disk"></i> Save changes</button>
+            <button type="button" class="btn-outline" onclick="location.href='404.html'">Cancel</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Change Password -->
+      <div class="settings-section">
+        <div class="settings-section-head">
+          <i class="fa-solid fa-lock"></i>
+          <div><h3>Change Password</h3><p>Keep your account secure with a strong password</p></div>
+        </div>
+        <div class="pw-change-grid">
+          <div class="field">
+            <label for="dCurrentPass">Current password</label>
+            <div class="pw-wrap">
+              <input id="dCurrentPass" type="password" placeholder="Enter current password">
+              <button type="button" class="pw-toggle" data-target="dCurrentPass" aria-label="Show password"><i class="fa-solid fa-eye"></i></button>
             </div>
           </div>
-          <button type="submit" class="btn btn-primary mt-2" onclick="location.href='404.html'"><i class="fa-solid fa-floppy-disk"></i> Save changes</button>
-        </form>
+          <div class="field">
+            <label for="dPass">New password</label>
+            <div class="pw-wrap">
+              <input id="dPass" type="password" placeholder="Enter new password">
+              <button type="button" class="pw-toggle" data-target="dPass" aria-label="Show password"><i class="fa-solid fa-eye"></i></button>
+            </div>
+          </div>
+        </div>
+        <div class="settings-actions">
+          <button type="button" class="btn btn-primary" onclick="location.href='404.html'"><i class="fa-solid fa-shield-halved"></i> Update Password</button>
+        </div>
+      </div>
+
+      <!-- Danger Zone -->
+      <div class="settings-section" style="border-color:var(--pink);">
+        <div class="settings-section-head">
+          <i class="fa-solid fa-triangle-exclamation" style="background:var(--pink-tint); color:var(--pink);"></i>
+          <div><h3 style="color:var(--pink);">Danger Zone</h3><p>Irreversible actions for your account</p></div>
+        </div>
+        <div class="settings-actions" style="border-top:none; padding-top:0; margin-top:0;">
+          <button type="button" class="btn-outline" style="border-color:var(--pink); color:var(--pink);" onclick="location.href='404.html'"><i class="fa-solid fa-trash"></i> Delete Account</button>
+        </div>
       </div>
     </div>
 

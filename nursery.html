@@ -48,8 +48,7 @@
     <div class="panel">
       <div class="mobile-nav-top">
         <a href="index.html" class="brand">
-          <span class="brand-mark"><i class="fa-solid fa-leaf fa-fw"></i></span>
-          <span class="brand-name">Stackly</span>
+          <img src="Assets/logo_black (6).webp" alt="Stackly" class="mobile-brand-logo">
         </a>
         <button class="mobile-close" id="mobileNavClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
       </div>
@@ -77,11 +76,83 @@
 
 <main>
 <!-- 1. PAGE BANNER -->
-<section class="hero">
-  <div class="hero-slides">
-    <div class="hero-slide active" style="background-image:url('Assets/Nursery1.webp')"></div>
-    <div class="hero-slide" style="background-image:url('Assets/Nursery2.webp')"></div>
-    <div class="hero-slide" style="background-image:url('Assets/Nursery_3.webp')"></div>
+<section class="hero nursery-hero">
+  <div class="hero-svg-decor">
+    <!-- Layer 1: Morphing blobs -->
+    <svg class="hsd-layer-blobs" viewBox="0 0 400 600" preserveAspectRatio="xMidYMid slice" fill="none">
+      <path class="blob-a" d="M-10,130 Q90,50 200,90 Q310,130 370,30 Q430,-50 470,70 Q510,190 410,250 Q310,310 210,270 Q110,230 -10,130Z" fill="var(--pink)" opacity=".08"/>
+      <path class="blob-b" d="M340,370 Q420,290 490,350 Q560,410 520,510 Q480,610 400,570 Q320,530 340,450 Q360,390 340,370Z" fill="var(--yellow)" opacity=".1"/>
+      <path class="blob-c" d="M-20,470 Q40,410 120,450 Q200,490 180,570 Q160,650 80,610 Q0,570 -20,470Z" fill="var(--pink)" opacity=".06"/>
+    </svg>
+    <!-- Layer 2: Wave curves -->
+    <svg class="hsd-layer-waves" viewBox="0 0 400 600" preserveAspectRatio="xMidYMid slice" fill="none">
+      <path d="M-20,518 Q80,478 160,498 Q240,518 320,488 Q400,458 440,498 L440,620 L-20,620Z" fill="var(--pink)" opacity=".06"/>
+      <path d="M-20,550 Q60,520 140,540 Q220,560 300,530 Q380,500 440,530 L440,620 L-20,620Z" fill="var(--yellow)" opacity=".05"/>
+      <path d="M-20,576 Q100,556 180,571 Q260,586 340,566 Q420,546 440,561 L440,620 L-20,620Z" fill="var(--pink)" opacity=".04"/>
+    </svg>
+    <!-- Layer 3: Floating circles -->
+    <svg class="hsd-layer-circles" viewBox="0 0 400 600" preserveAspectRatio="xMidYMid slice" fill="none">
+      <circle class="fc" cx="330" cy="80" r="50" fill="var(--pink)" opacity=".1"/>
+      <circle class="fc" cx="60" cy="190" r="32" fill="var(--yellow)" opacity=".12"/>
+      <circle class="fc" cx="250" cy="310" r="24" fill="var(--pink)" opacity=".08"/>
+      <circle class="fc" cx="130" cy="110" r="16" fill="var(--yellow)" opacity=".1"/>
+      <circle class="fc" cx="360" cy="400" r="38" fill="var(--pink)" opacity=".07"/>
+      <circle class="fc" cx="80" cy="470" r="26" fill="var(--yellow)" opacity=".09"/>
+      <circle class="fc" cx="200" cy="60" r="12" fill="var(--pink)" opacity=".1"/>
+      <circle class="fc" cx="310" cy="230" r="10" fill="var(--yellow)" opacity=".12"/>
+    </svg>
+    <!-- Layer 4: Twinkling stars -->
+    <svg class="hsd-layer-stars" viewBox="0 0 400 600" preserveAspectRatio="xMidYMid slice" fill="none">
+      <path class="tw" d="M350,50 L354,62 L366,62 L356,70 L360,82 L350,74 L340,82 L344,70 L334,62 L346,62Z" fill="var(--yellow)" opacity=".3"/>
+      <path class="tw" d="M70,80 L73,88 L81,88 L75,93 L77,101 L70,96 L63,101 L65,93 L59,88 L67,88Z" fill="var(--pink)" opacity=".25"/>
+      <path class="tw" d="M290,290 L293,298 L301,298 L295,303 L297,311 L290,306 L283,311 L285,303 L279,298 L287,298Z" fill="var(--yellow)" opacity=".2"/>
+      <path class="tw" d="M50,420 L53,428 L61,428 L55,433 L57,441 L50,436 L43,441 L45,433 L39,428 L47,428Z" fill="var(--pink)" opacity=".22"/>
+      <path class="tw" d="M230,510 L233,518 L241,518 L235,523 L237,531 L230,526 L223,531 L225,523 L219,518 L227,518Z" fill="var(--yellow)" opacity=".18"/>
+      <path class="tw" d="M400,180 L402,186 L408,186 L403,190 L405,196 L400,192 L395,196 L397,190 L392,186 L398,186Z" fill="var(--pink)" opacity=".2"/>
+    </svg>
+    <!-- Layer 5: Dot grid -->
+    <svg class="hsd-layer-dots" viewBox="0 0 400 600" preserveAspectRatio="xMidYMid slice" fill="none">
+      <circle cx="40" cy="60" r="2" fill="var(--pink)" opacity=".2"/>
+      <circle cx="80" cy="60" r="2" fill="var(--pink)" opacity=".15"/>
+      <circle cx="120" cy="60" r="2" fill="var(--pink)" opacity=".2"/>
+      <circle cx="160" cy="60" r="2" fill="var(--pink)" opacity=".15"/>
+      <circle cx="200" cy="60" r="2" fill="var(--pink)" opacity=".2"/>
+      <circle cx="240" cy="60" r="2" fill="var(--pink)" opacity=".15"/>
+      <circle cx="280" cy="60" r="2" fill="var(--pink)" opacity=".2"/>
+      <circle cx="320" cy="60" r="2" fill="var(--pink)" opacity=".15"/>
+      <circle cx="360" cy="60" r="2" fill="var(--pink)" opacity=".2"/>
+      <circle cx="60" cy="100" r="2" fill="var(--pink)" opacity=".15"/>
+      <circle cx="100" cy="100" r="2" fill="var(--pink)" opacity=".2"/>
+      <circle cx="140" cy="100" r="2" fill="var(--pink)" opacity=".15"/>
+      <circle cx="180" cy="100" r="2" fill="var(--pink)" opacity=".2"/>
+      <circle cx="220" cy="100" r="2" fill="var(--pink)" opacity=".15"/>
+      <circle cx="260" cy="100" r="2" fill="var(--pink)" opacity=".2"/>
+      <circle cx="300" cy="100" r="2" fill="var(--pink)" opacity=".15"/>
+      <circle cx="340" cy="100" r="2" fill="var(--pink)" opacity=".2"/>
+      <circle cx="40" cy="140" r="2" fill="var(--pink)" opacity=".2"/>
+      <circle cx="80" cy="140" r="2" fill="var(--pink)" opacity=".15"/>
+      <circle cx="120" cy="140" r="2" fill="var(--pink)" opacity=".2"/>
+      <circle cx="160" cy="140" r="2" fill="var(--pink)" opacity=".15"/>
+      <circle cx="200" cy="140" r="2" fill="var(--pink)" opacity=".2"/>
+      <circle cx="240" cy="140" r="2" fill="var(--pink)" opacity=".15"/>
+      <circle cx="280" cy="140" r="2" fill="var(--pink)" opacity=".2"/>
+      <circle cx="320" cy="140" r="2" fill="var(--pink)" opacity=".15"/>
+      <circle cx="360" cy="140" r="2" fill="var(--pink)" opacity=".2"/>
+      <circle cx="60" cy="180" r="2" fill="var(--pink)" opacity=".15"/>
+      <circle cx="100" cy="180" r="2" fill="var(--pink)" opacity=".2"/>
+      <circle cx="140" cy="180" r="2" fill="var(--pink)" opacity=".15"/>
+      <circle cx="180" cy="180" r="2" fill="var(--pink)" opacity=".2"/>
+      <circle cx="220" cy="180" r="2" fill="var(--pink)" opacity=".15"/>
+      <circle cx="260" cy="180" r="2" fill="var(--pink)" opacity=".2"/>
+      <circle cx="300" cy="180" r="2" fill="var(--pink)" opacity=".15"/>
+      <circle cx="340" cy="180" r="2" fill="var(--pink)" opacity=".2"/>
+    </svg>
+  </div>
+  <div class="hero-content">
+    <span class="eyebrow"><i class="fa-solid fa-palette"></i> Nursery &amp; Decor</span>
+    <h1>Dream rooms for <span style="color:var(--pink);">dreamers</span></h1>
+    <p>Curated furniture, bedding, lighting, and wall art to create the perfect nursery — where every detail is designed with care.</p>
+    <a href="404.html" class="hero-shop-btn">Shop Now <i class="fa-solid fa-circle-right"></i></a>
   </div>
 </section>
 
